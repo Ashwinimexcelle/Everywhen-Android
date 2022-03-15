@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_now_and_then">
+
+    <fragment
+        android:id="@+id/nav_now_and_then"
+        android:name="com.mexcelle.everywhendemo.ui.ui.home.HomeFragment"
+        android:label="@string/menu_now_and_then"
+        tools:layout="@layout/fragment_home">
+
+        <action
+            android:id="@+id/action_homeFragment_to_predict"
+            app:destination="@id/predictThePictureIntro" />
+
+        <action
+            android:id="@+id/action_homeFragment_to_now"
+            app:destination="@id/nowAndThenIntro" />
+
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_profile"
+        android:name="com.mexcelle.everywhendemo.ui.ProfileScreenFragment"
+        android:label="@string/menu_profile"
+        tools:layout="@layout/fragment_profile_screen" >
+
+    <action
+        android:id="@+id/action_profilescreenfragment_to_profilefragment"
+        app:destination="@id/profileFragment" />
+
+    </fragment>
+
+
+
+    <fragment
+        android:id="@+id/nav_friends"
+        android:name="com.mexcelle.everywhendemo.ui.FriendsFragment"
+        android:label="@string/menu_friends"
+        tools:layout="@layout/fragment_friends" />
+
+    <fragment
+        android:id="@+id/nav_purchase_flairs"
+        android:name="com.mexcelle.everywhendemo.ui.PurchaseFlairFragment"
+        android:label="@string/menu_purchase_flairs"
+        tools:layout="@layout/fragment_purchase_flairs" >
+
+    <action
+        android:id="@+id/action_purchaseflair_to_friendfragment"
+        app:destination="@id/nav_friends" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/nav_settings"
+        android:name="com.mexcelle.everywhendemo.ui.SettingsFragment"
+        android:label="@string/menu_settings"
+        tools:layout="@layout/fragment_settings" />
+    <fragment
+        android:id="@+id/predictThePictureIntro"
+        android:name="com.mexcelle.everywhendemo.ui.PredictThePictureIntro"
+        android:label="PredictThePictureIntro">
+        <action
+            android:id="@+id/action_predictThePictureIntro_to_predictThePictureQuestionFragment"
+            app:destination="@id/predictThePictureQuestionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nowAndThenIntro"
+        android:name="com.mexcelle.everywhendemo.ui.NowAndThenIntro"
+        android:label="NowAndThenIntro" >
+        <action
+            android:id="@+id/action_nowAndThenIntro_to_nowAndThenTimerFragment"
+            app:destination="@id/nowAndThenTimerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/predictThePictureQuestionFragment"
+        android:name="com.mexcelle.everywhendemo.ui.PredictThePictureQuestionFragment"
+        android:label="PredictThePictureQuestionFragment" >
+
+
+        <action
+            android:id="@+id/action_predictThePictureQuestionFragment_self"
+            app:destination="@id/predictThePictureQuestionFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nowAndThenQuesFragment"
+        android:name="com.mexcelle.everywhendemo.ui.NowAndThenQuesFragment"
+        android:label="NowAndThenQuesFragment" >
+        <action
+            android:id="@+id/action_nowAndThenQuesFragment_self"
+            app:destination="@id/nowAndThenQuesFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/nowAndThenTimerFragment"
+        android:name="com.mexcelle.everywhendemo.ui.NowAndThenTimer"
+        android:label="NowAndThenTimer" >
+        <action
+            android:id="@+id/action_nowAndThenTimerFragment_to_nowAndThenQuesFragment"
+            app:destination="@id/nowAndThenQuesFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.mexcelle.everywhendemo.ui.ProfileFragment"
+        android:label="ProfileFragment"
+        tools:layout="@layout/fragment_profile">
+
+    </fragment>
+    <fragment
+        android:id="@+id/slideshowFragment"
+        android:name="com.mexcelle.everywhendemo.ui.ui.slideshow.SlideshowFragment"
+        android:label="fragment_purchase_flairs"
+        tools:layout="@layout/fragment_purchase_flairs" >
+
+
+
+    </fragment>
+
+
+</navigation>

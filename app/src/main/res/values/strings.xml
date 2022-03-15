@@ -1,0 +1,100 @@
+<resources>
+
+    <string name="app_name">Everywhen-Android</string>
+
+    <string name="splash_txt1">Copyright @ EveryWhen 2021</string>
+    <string name="splash_txt2">ALL RIGHTS ARE RESERVED</string>
+    <string name="proceed_txt">PROCEED</string>
+    <string name="terms_title_txt1">TERMS AND CONDITIONS</string>
+    <string name="terms_txt1">TERMS AND CONDITIONS DATA</string>
+    <string name="terms_accept_txt">Accept</string>
+    <string name="terms_continue_txt">Continue</string>
+    <string name="save_txt">Save</string>
+    <string name="privacy_title_txt1">PRIVACY POLICY</string>
+    <string name="privacy_txt1">PRIVACY POLICY DATA</string>
+
+    <string name="privacy_policy_txt1">Participate in Research</string>
+    <string name="privacy_policy_txt2">Marketing</string>
+    <string name="privacy_policy_txt3">Keep in touch with EveryWhen</string>
+
+    <string name="privacy_policy_txt11">Keep in touch with EveryWhen</string>
+    <string name="privacy_policy_txt21">Keep in touch with EveryWhen</string>
+    <string name="privacy_policy_txt31">Keep in touch with EveryWhen</string>
+
+    <string name="login_txt1">LOGIN TO YOUR</string>
+    <string name="login_txt2">EveryWhen</string>
+    <string name="login_txt3">Account</string>
+    <string name="login_username_txt">Username</string>
+    <string name="login_password_txt">Password</string>
+    <string name="login_txt">Login</string>
+    <string name="email_txt">Email</string>
+    <string name="email_hint_txt">Add your email here</string>
+    <string name="password_hint_txt">Add your password here</string>
+    <string name="username_hint_txt">Add your username here</string>
+
+
+    <string name="register_txt">REGISTER YOUR</string>
+    <string name="register_txt1">Register</string>
+    <string name="forgot_password_txt">Forgot Password?</string>
+    <string name="signin_with_apple_txt">Signin with Apple</string>
+    <string name="signin_with_google_txt">Sign in with Google</string>
+
+    <string name="user_fontawesome">&#xf007;</string>
+    <string name="password_fontawesome">&#xf084;</string>
+    <string name="email_fontawesome">&#xf0e0;</string>
+    <string name="check_fontawesome">&#xf058;</string>
+
+    <string name="now_and_then_fontawesome">&#xf0ae;</string>
+    <string name="profile_fontawesome">&#xf2bd;</string>
+    <string name="purchase_flare_fontawesome">&#xf058;</string>
+    <string name="friends_fontawesome">&#xf500;</string>
+    <string name="settings_fontawesome">&#xf013;</string>
+    <string name="location_fontawesome">&#xf61f;</string>
+    <string name="birthday_fontawesome">&#xf1fd;</string>
+    <string name="ethinicity_fontawesome">&#xf277;</string>
+    <string name="location_arrow_fontawesome">&#xf124;</string>
+    <string name="ancestral_fontawesome">&#xe068;</string>
+    <string name="map_marker_fontawesome">&#xf59f;</string>
+    <string name="edit_fontawesome">&#xf044;</string>
+    <string name="gem_fontawesome">&#xf3a5;</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <string name="title_activity_home_screen">HomeScreenActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+    <string name="otp_txt">OTP CODE</string>
+    <string name="otp_txt1">We have sent you a confirmation code to your registered email id.</string>
+    <string name="otp_txt2">Please enter the code below</string>
+
+
+
+
+    <string name="menu_now_and_then">     NOW AND THEN</string>
+    <string name="menu_profile">      PROFILE</string>
+    <string name="menu_friends">     FRIENDS</string>
+    <string name="menu_purchase_flairs">     PURCHASE FLAIRS</string>
+    <string name="menu_settings">     SETTINGS</string>
+    <string name="api_key">AIzaSyA7_oAsyQI3upjrn-EJP2Qe68qrEwe8dlM</string>
+
+
+
+
+
+</resources>

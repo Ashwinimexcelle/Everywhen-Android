@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="fitXY"
+        android:src="@drawable/prelude_screen" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <TextView
+            android:id="@+id/prelude_txt1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_190sdp"
+            android:layout_marginRight="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:gravity="center_horizontal"
+            android:text="The EveryWhenTM app platform allows
+thousands of people to simultaneously
+share predictions about the same event
+in a game-like format.\n\n
+The wisdom of crowds, first described by
+Sir Francis Galton in 1907, shows
+collective decisions are better than
+individual decisions.\n\n
+EveryWhen repurposes this wisdom in a
+whole new way:"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+        <TextView
+            android:id="@+id/prelude_txt2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/proceed_btn"
+            android:textColor="@color/border"
+            android:gravity="center_horizontal"
+            android:text="To leverage collective intuition"
+            android:textSize="@dimen/_16ssp"
+            android:layout_below="@+id/prelude_txt1" />
+
+
+        <TextView
+            android:id="@+id/proceed_btn"
+            android:layout_width="@dimen/_130sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="@dimen/_50sdp"
+            android:background="@drawable/onboarding_proceed_button"
+            android:gravity="center"
+            android:text="@string/proceed_txt"
+            android:textColor="@color/primary"
+            android:textSize="@dimen/_12sdp" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

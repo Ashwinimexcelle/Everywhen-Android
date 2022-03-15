@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background_pattern">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/_40sdp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_80sdp"
+                android:text="HOW TO USE THE"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/_12sdp" />
+
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/txt1"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_marginRight="@dimen/_10sdp"
+                android:gravity="bottom"
+                android:text="EVERYWHEN"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/_24sdp" />
+
+            <TextView
+                android:id="@+id/txt3"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/_30sdp"
+                android:layout_below="@+id/txt1"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:layout_toRightOf="@+id/txt2"
+                android:gravity="bottom"
+                android:text="PLATFORM"
+                android:textColor="@color/primary"
+                android:textSize="@dimen/_14sdp" />
+
+            <RelativeLayout
+                android:id="@+id/rl1"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_170sdp"
+                android:layout_below="@+id/txt3"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:background="@drawable/rounded_corner_grey">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_imageView1"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:paddingTop="@dimen/nav_header_vertical_spacing"
+                    android:src="@mipmap/ic_launcher"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/_2sdp" />
+
+                <TextView
+                    android:id="@+id/how_to_use_txt2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/user_imageView1"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:isScrollContainer="true"
+                    android:scrollbars="vertical"
+                    android:text="Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Egestas elementum et id
+scelerisque ac quis accumsan. Enim ultrices nisl
+etiam fermentum magna eu. Eget facilisis netus
+viverra tristique pulvinar. Cras urn, eleifend sit
+suspendisse dui urna, eget."
+                    android:textColor="@color/grey_txt_color1"
+                    android:textSize="@dimen/_10ssp" />
+
+
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:id="@+id/rl2"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_170sdp"
+                android:layout_below="@+id/rl1"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_30sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+
+                android:background="@drawable/rounded_corner_grey">
+
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/user_imageView2"
+                    android:layout_width="@dimen/_70sdp"
+                    android:layout_height="@dimen/_70sdp"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:contentDescription="@string/nav_header_desc"
+                    android:paddingTop="@dimen/nav_header_vertical_spacing"
+                    android:src="@mipmap/ic_launcher"
+                    app:civ_border_color="@color/white"
+                    app:civ_border_width="@dimen/_2sdp" />
+
+                <TextView
+                    android:id="@+id/how_to_use_txt1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/user_imageView2"
+                    android:layout_marginLeft="@dimen/_20sdp"
+                    android:layout_marginTop="@dimen/_10sdp"
+                    android:layout_marginRight="@dimen/_20sdp"
+                    android:layout_marginBottom="@dimen/_10sdp"
+                    android:isScrollContainer="true"
+                    android:scrollbars="vertical"
+                    android:text="Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Egestas elementum et id
+scelerisque ac quis accumsan. Enim ultrices nisl
+etiam fermentum magna eu. Eget facilisis netus
+viverra tristique pulvinar. Cras urn, eleifend sit
+suspendisse dui urna, eget."
+
+                    android:textColor="@color/grey_txt_color1"
+                    android:textSize="@dimen/_10ssp" />
+
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+
+        <TextView
+            android:id="@+id/continue_btn"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:background="@drawable/rounded_corner_blue_bg"
+            android:gravity="center"
+            android:paddingLeft="@dimen/_10sdp"
+            android:text="Skip"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

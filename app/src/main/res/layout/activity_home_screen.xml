@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/drawer_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:openDrawer="start">
+
+    <include
+        android:id="@+id/app_bar_home_screen"
+        layout="@layout/app_bar_home_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="@dimen/_200sdp"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:visibility="visible"
+        android:clipToPadding="false"
+        android:paddingBottom="@dimen/_200sdp"
+        app:itemTextColor="@color/primary"
+        app:itemIconTint="@color/primary"
+        android:gravity="end"
+        app:itemTextAppearance="@style/NavigationDrawerStyle"
+        app:headerLayout="@layout/nav_header_home_screen"
+        app:menu="@menu/activity_main_drawer" >
+
+        <TextView
+            android:id="@+id/terms"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="-116dp"
+            android:gravity="center"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/sidemenu_txt"
+            android:text="Terms And Conditions" />
+
+        <TextView
+            android:id="@+id/privacy"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="bottom"
+            android:layout_marginBottom="-146dp"
+            android:gravity="center"
+            android:textSize="@dimen/_10sdp"
+            android:textColor="@color/sidemenu_txt"
+            android:text="Privacy Policy" />
+
+
+    <TextView
+        android:id="@+id/logout"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_gravity="bottom"
+        android:layout_marginBottom="-206dp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_10sdp"
+        android:background="@drawable/gradiant_bg"
+        android:gravity="center"
+        android:textSize="@dimen/_12sdp"
+        android:textColor="@color/white"
+        android:text="Logout" />
+
+    </com.google.android.material.navigation.NavigationView>
+
+
+</androidx.drawerlayout.widget.DrawerLayout>

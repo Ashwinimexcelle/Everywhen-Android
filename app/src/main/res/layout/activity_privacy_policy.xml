@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.TermsAndConditionsActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        android:src="@drawable/bluebackground"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent" />
+
+    <RelativeLayout
+        android:id="@+id/privacy_main_rl"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_250sdp"
+        android:layout_marginTop="@dimen/_10sdp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <TextView
+            android:id="@+id/privacy_policy_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_50sdp"
+            android:gravity="center_vertical|left"
+            android:text="@string/privacy_title_txt1"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12sdp" />
+
+
+        <TextView
+            android:id="@+id/privacy_policy_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/privacy_policy_title"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_70sdp"
+            android:gravity="top|left"
+            android:maxLines="4"
+            android:text="Lorem ipsum dolor sit amet, consectetur
+adipiscing elit. Rhoncus posuere aliquam
+placerat morbi phasellus. In commodo"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_10sdp" />
+
+        <TextView
+            android:id="@+id/privacy_policy_accept_txt"
+            android:layout_width="@dimen/_100sdp"
+            android:layout_height="@dimen/_35sdp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_20sdp"
+            android:layout_marginBottom="@dimen/_25sdp"
+            android:background="@drawable/rounded_corner_white_bg"
+            android:gravity="center"
+            android:maxLines="4"
+            android:text="@string/terms_accept_txt"
+            android:textColor="@color/black"
+            android:textSize="@dimen/_10sdp" />
+
+
+    </RelativeLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/_250sdp"
+        android:background="@color/white"
+        android:orientation="vertical">
+
+
+        <Switch
+            android:id="@+id/switch1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:text="@string/privacy_policy_txt1"
+            android:theme="@style/SCBSwitch"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/switch1_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/grey_txt_color1"
+            android:text="Ultrices aenean odio aliquet id scelerisque
+facilisis. Tincidunt sed id commodo tristique.
+Aliquet id et amet,"/>
+
+        <Switch
+            android:id="@+id/switch2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:theme="@style/SCBSwitch"
+            android:text="@string/privacy_policy_txt2"
+            android:textSize="@dimen/_12ssp"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/switch2_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/grey_txt_color1"
+            android:text="Ultrices aenean odio aliquet id scelerisque
+facilisis. Tincidunt sed id commodo tristique.
+Aliquet id et amet, phasellus."/>
+
+        <Switch
+            android:id="@+id/switch3"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_25sdp"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:textSize="@dimen/_12ssp"
+            app:trackTint="@color/white"
+            app:thumbTint="@color/grey11"
+            android:theme="@style/SCBSwitch"
+            android:text="@string/privacy_policy_txt3"
+            android:textColor="@color/black" />
+
+        <TextView
+            android:id="@+id/switch3_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/_30sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_30sdp"
+            android:textSize="@dimen/_10ssp"
+            android:textColor="@color/grey_txt_color1"
+            android:text="Ultrices aenean odio aliquet id scelerisque
+facilisis. Tincidunt sed id commodo tristique.
+Aliquet id et amet, phasellus."/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

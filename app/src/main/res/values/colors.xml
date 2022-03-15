@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="purple_200">#FFBB86FC</color>
+    <color name="purple_500">#FF6200EE</color>
+    <color name="purple_700">#FF3700B3</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+
+
+    <color name="on_boarding_txt_color">#f3d5bf</color>
+    <color name="blue_txt_color">#212A72</color>
+
+    <color name="grey_txt_color1">#717171</color>
+    <color name="edittxt_color">#ECF0F9</color>
+    <color name="user_color">#4139A3</color>
+    <color name="hint_color">#9899A0</color>
+    <color name="check_color"> #82cd9b</color>
+    <color name="txt_color">#5C5D67</color>
+    <color name="gradiant_color1">#590E60</color>
+    <color name="gradiant_color2">#400A5C</color>
+    <color name="gradiant_color3">#2B0959</color>
+    <color name="light_grey"> #f8f8f8</color>
+    <color name="light_grey1">#F1F1F7</color>
+
+
+    <color name="primary">#232D7A</color>
+    <color name="sidemenu_txt">#5D2E74</color>
+    <color name="sidemenu_txt1">#421B6C</color>
+    <color name="sidemenu_txt2">#2B0A5A</color>
+    <color name="grey11">#ECF0F0</color>
+    <color name="primary1">#545AA6</color>
+
+    <color name="gradiant_color4">#545AA6</color>
+    <color name="gradiant_color5">#5E357E</color>
+    <color name="gradiant_color6">#DDC9B7</color>
+    <color name="border">#E3B96A</color>
+    <color name="grey_txt11">#313131</color>
+    <color name="ed_color1">#ECF0F9</color>
+    <color name="ed_border_color1">#827EEB</color>
+    <color name="txt_color3">#451E04</color>
+    <color name="bg1">#8181E4</color>
+    <color name="score1">#70C775</color>
+    <color name="score1_bg">#D3E8E0</color>
+    <color name="wrong_ans">#FF0000</color>
+    <color name="right_ans">#008000</color>
+    <color name="predict_rapid_mode_gradiant1">#896c9b</color>
+    <color name="predict_rapid_mode_gradiant2">#9b8498</color>
+    <color name="predict_rapid_mode_gradiant3">#c1b799</color>
+    <color name="result_txt">#513513</color>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

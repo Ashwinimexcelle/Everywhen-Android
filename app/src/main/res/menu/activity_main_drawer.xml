@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layoutDirection="rtl"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_home_icon"
+            android:title="@string/menu_now_and_then"
+            android:checkable="true"
+            android:icon="@drawable/ic_now_and_then"
+            android:layout_gravity="end"/>
+
+        <item
+            android:id="@+id/nav_profile_icon"
+            android:title="@string/menu_profile"
+            android:icon="@drawable/ic_user"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/nav_friends_icon"
+            android:title="@string/menu_friends"
+            android:icon="@drawable/ic_user_friends"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/nav_purchase_icon"
+            android:title="@string/menu_purchase_flairs"
+            android:icon="@drawable/ic_purchase_flair"
+            app:showAsAction="always" />
+
+        <item
+            android:id="@+id/nav_settings_icon"
+            android:title="@string/menu_settings"
+            android:icon="@drawable/ic_settings"
+            app:showAsAction="always" />
+
+    </group>
+</menu>

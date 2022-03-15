@@ -1,0 +1,235 @@
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+
+    <data class="PredictThePictureQuesFragmentBinding">
+
+        <variable
+            name="predictThePictureQuesViewModel"
+            type="com.mexcelle.everywhendemo.viewModel.PredictThePictureQuesViewModel" />
+
+    </data>
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@drawable/gradient1_bg">
+
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:text="Predict The Picture"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_18sdp" />
+
+
+            <TextView
+                android:id="@+id/txt2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txt1"
+                android:layout_marginLeft="@dimen/_20sdp"
+                android:layout_marginRight="@dimen/_20sdp"
+                android:text="Identify the correct image from the random set of 4 in 7 seconds"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_10ssp" />
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/txt2"
+                android:layout_margin="@dimen/_35sdp"
+                android:background="@drawable/rounded_corner_ques">
+
+                <ScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:scrollbars="vertical"
+                    android:fillViewport="true">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent">
+
+                        <TextView
+                            android:id="@+id/time_left_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:text="Time Left"
+                            android:textSize="@dimen/_10sdp" />
+
+                        <ProgressBar
+                            android:id="@+id/progressbar"
+                            style="@android:style/Widget.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/time_left_id"
+                            android:layout_marginStart="@dimen/_10sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginEnd="@dimen/_10sdp"
+                            android:layout_marginBottom="@dimen/_10sdp"
+                            android:max="100"
+                            android:scaleY="0.5"
+                            android:progress="0" />
+
+                        <TextView
+                            android:id="@+id/ques_id"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/progressbar"
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:gravity="center"
+                            android:text="Which animal has matched your intuition?"
+                            android:textColor="@color/blue_txt_color"
+                            android:textSize="@dimen/_16sdp" />
+
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/recyclerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_below="@+id/ques_id"
+
+                            android:layout_marginStart="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_20sdp"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            tools:listitem="@layout/grid_view_item" />
+
+
+
+
+                       <!-- <LinearLayout
+                            android:id="@+id/ll1"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:weightSum="2"
+                            android:orientation="horizontal"
+                            android:layout_below="@+id/ques_id"
+                            android:gravity="center">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/opt1"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="@dimen/_50sdp"
+                                android:src="@mipmap/ic_launcher_round"
+                                android:gravity="center" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:layout_width="0dp"
+                                android:layout_height="match_parent"
+                                android:layout_weight="1"
+                                android:src="@mipmap/ic_launcher_round"
+                                android:gravity="center" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/opt2"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="match_parent"
+                                android:src="@mipmap/ic_launcher_round"
+                                android:gravity="center" />
+
+
+                        </LinearLayout>-->
+
+                       <!-- <LinearLayout
+                            android:id="@+id/ll2"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:weightSum="2"
+                            android:layout_below="@+id/ll1"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_30sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+
+                            android:gravity="center">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/opt3"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="@dimen/_50sdp"
+                                android:gravity="center"
+                                android:text="Candice Owens"
+                                android:src="@mipmap/ic_launcher_round"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/opt4"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="@dimen/_50sdp"
+                                android:gravity="center"
+                                android:src="@mipmap/ic_launcher_round"
+                                android:text="Joe Biden"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </LinearLayout>-->
+
+                        <!--<LinearLayout
+                            android:id="@+id/ll3"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/_50sdp"
+                            android:weightSum="2"
+                            android:layout_below="@+id/ll2"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/_30sdp"
+                            android:layout_marginBottom="@dimen/_20sdp"
+                            android:gravity="center">
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/opt5"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="@dimen/_50sdp"
+                                android:gravity="center"
+                                android:text="Candice Owens"
+                                android:src="@mipmap/ic_launcher_round"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12sdp" />
+
+                            <de.hdodenhof.circleimageview.CircleImageView
+                                android:id="@+id/opt6"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="@dimen/_50sdp"
+                                android:gravity="center"
+                                android:src="@mipmap/ic_launcher_round"
+                                android:text="Joe Biden"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_12sdp" />
+
+                        </LinearLayout>-->
+
+
+
+                    </RelativeLayout>
+                </ScrollView>
+            </RelativeLayout>
+
+        </RelativeLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</layout>
