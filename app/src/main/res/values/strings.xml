@@ -1,8 +1,9 @@
 <resources>
 
-    <string name="app_name">Everywhen-Android</string>
+    <string name="app_name">Thoughtify</string>
+    <string name="login_text11">To your Thoughtify Account</string>
 
-    <string name="splash_txt1">Copyright @ EveryWhen 2021</string>
+    <string name="splash_txt1">Copyright @ Thoughtify 2021</string>
     <string name="splash_txt2">ALL RIGHTS ARE RESERVED</string>
     <string name="proceed_txt">PROCEED</string>
     <string name="terms_title_txt1">TERMS AND CONDITIONS</string>
@@ -21,7 +22,7 @@
     <string name="privacy_policy_txt21">Keep in touch with EveryWhen</string>
     <string name="privacy_policy_txt31">Keep in touch with EveryWhen</string>
 
-    <string name="login_txt1">LOGIN TO YOUR</string>
+    <string name="login_txt1">Log In</string>
     <string name="login_txt2">EveryWhen</string>
     <string name="login_txt3">Account</string>
     <string name="login_username_txt">Username</string>
@@ -38,6 +39,7 @@
     <string name="forgot_password_txt">Forgot Password?</string>
     <string name="signin_with_apple_txt">Signin with Apple</string>
     <string name="signin_with_google_txt">Sign in with Google</string>
+
 
     <string name="user_fontawesome">&#xf007;</string>
     <string name="password_fontawesome">&#xf084;</string>
@@ -85,16 +87,15 @@
 
 
 
+    <string name="change_password_txt">Change Password</string>
 
     <string name="menu_now_and_then">     NOW AND THEN</string>
     <string name="menu_profile">      PROFILE</string>
     <string name="menu_friends">     FRIENDS</string>
     <string name="menu_purchase_flairs">     PURCHASE FLAIRS</string>
-    <string name="menu_settings">     SETTINGS</string>
-    <string name="api_key">AIzaSyA7_oAsyQI3upjrn-EJP2Qe68qrEwe8dlM</string>
-
-
-
+    <string name="menu_settings">     CHANGE PASSWORD</string>
+    <string name="api_key">AIzaSyBX-butYCaXHDlZGXCEmlNCeQPuaxfrNqI</string>
+    <string name="default_notification_channel_id">thoughtify_channel_id</string>
 
 
 </resources>

@@ -31,9 +31,10 @@
                 android:layout_below="@+id/txt1"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_5sdp"
+                android:textAllCaps="true"
                 android:layout_marginRight="@dimen/_10sdp"
                 android:gravity="bottom"
-                android:text="EVERYWHEN"
+                android:text="@string/app_name"
                 android:textColor="@color/primary"
                 android:textSize="@dimen/_24sdp" />
 

@@ -6,7 +6,7 @@
 
         <variable
             name="loginScreenViewModel"
-            type="com.mexcelle.everywhendemo.viewModel.LoginScreenViewModel" />
+            type="com.mexcelle.thoughtifydemo.viewModel.LoginScreenViewModel" />
 
     </data>
 
@@ -31,12 +31,12 @@
                     android:layout_height="match_parent"
                     android:layout_marginBottom="@dimen/_30sdp"
                     android:scaleType="centerCrop"
-                    android:src="@drawable/login" />
+                    android:src="@drawable/login1" />
 
                 <ImageView
                     android:layout_width="@dimen/_50sdp"
                     android:layout_height="@dimen/_50sdp"
-                    android:src="@drawable/ew_whitelogo"
+                    android:src="@drawable/logo1"
                     android:layout_marginTop="@dimen/_55sdp"
                     android:layout_marginLeft="@dimen/_20sdp"/>
 
@@ -46,11 +46,11 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginLeft="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_180sdp"
+                    android:layout_marginTop="@dimen/_120sdp"
                     android:layout_marginRight="@dimen/_20sdp"
                     android:text="@string/login_txt1"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_14sdp" />
+                    android:textSize="@dimen/_20sdp" />
 
 
                 <TextView
@@ -60,9 +60,10 @@
                     android:layout_below="@+id/login_txt1"
                     android:layout_marginLeft="@dimen/_20sdp"
                     android:layout_marginRight="@dimen/_20sdp"
-                    android:text="@string/login_txt2"
+                    android:text="@string/login_text11"
+                    android:textAllCaps="true"
                     android:textColor="@color/white"
-                    android:textSize="@dimen/_24sdp" />
+                    android:textSize="@dimen/_12sdp" />
 
                 <TextView
                     android:id="@+id/login_txt3"
@@ -72,6 +73,7 @@
                     android:layout_marginLeft="@dimen/_20sdp"
                     android:layout_marginRight="@dimen/_20sdp"
                     android:text="@string/login_txt3"
+                    android:visibility="gone"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_14sdp" />
 
@@ -167,6 +169,7 @@
                         android:background="@android:color/transparent"
                         android:hint="@string/password_hint_txt"
                         android:paddingLeft="@dimen/_10sdp"
+                        android:inputType="textPassword"
                         android:text="@={loginScreenViewModel.password}"
                         android:textColor="@color/txt_color"
                         android:textColorHint="@color/hint_color"

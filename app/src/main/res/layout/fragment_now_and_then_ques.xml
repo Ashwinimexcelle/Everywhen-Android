@@ -7,7 +7,7 @@
 
         <variable
             name="nowAndThenQuesViewModel"
-            type="com.mexcelle.everywhendemo.viewModel.NowAndThenQuesViewModel" />
+            type="com.mexcelle.thoughtifydemo.viewModel.NowAndThenQuesViewModel" />
 
     </data>
 

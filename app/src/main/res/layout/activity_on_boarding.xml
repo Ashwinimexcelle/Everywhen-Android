@@ -1,4 +1,4 @@
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="fill_parent"
     android:layout_height="match_parent"
@@ -9,45 +9,15 @@
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/pager11"
         android:layout_width="match_parent"
-        android:layout_height="@dimen/_350sdp"
+        android:layout_height="match_parent"
         android:layout_alignParentStart="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginBottom="@dimen/_100sdp"
         app:layout_constraintVertical_bias="0.0" />
-
-    <TextView
-        android:id="@+id/title1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:layout_marginRight="@dimen/_50sdp"
-        android:layout_marginLeft="@dimen/_50sdp"
-        app:layout_constraintTop_toBottomOf="@+id/pager11"
-        android:gravity="left|center_vertical"
-        android:text="Text"
-        android:maxLines="1"
-        android:textAllCaps="true"
-        android:textColor="@color/on_boarding_txt_color"
-        android:visibility="visible"
-        android:textSize="@dimen/_18ssp" />
-
-    <TextView
-        android:id="@+id/title2"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/_10sdp"
-        android:text="test2"
-        android:layout_marginRight="@dimen/_50sdp"
-        android:layout_marginLeft="@dimen/_50sdp"
-        app:layout_constraintTop_toBottomOf="@+id/title1"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:gravity="left"
-        android:textColor="@color/white"
-        android:visibility="visible"
-        android:textSize="@dimen/_10ssp" />
 
     <TextView
         android:id="@+id/skip_btn"
@@ -58,8 +28,8 @@
         android:text="@string/proceed_txt"
         android:textColor="@color/blue_txt_color"
         android:background="@drawable/onboarding_proceed_button"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
         android:textSize="@dimen/_12sdp"/>
 
     <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
@@ -67,15 +37,18 @@
         android:layout_width="wrap_content"
         android:layout_marginTop="@dimen/_30sdp"
         android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@+id/title2"
+        app:layout_constraintTop_toBottomOf="@+id/pager11"
         app:layout_constraintRight_toRightOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:dotsColor="@color/black"
         app:dotsStrokeColor="@color/white"
+        android:layout_centerHorizontal="true"
+        android:layout_above="@+id/skip_btn"
+        android:layout_marginBottom="@dimen/_20sdp"
         app:dotsCornerRadius="8dp"
         app:dotsSize="@dimen/_5sdp"
         app:dotsSpacing="4dp"
         app:selectedDotColor="@color/white"
         app:dotsStrokeWidth="2dp"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+</RelativeLayout>

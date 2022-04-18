@@ -7,17 +7,48 @@
     <ImageView
         android:id="@+id/image"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_alignParentBottom="true"
+        android:layout_height="@dimen/_400sdp"
         android:layout_marginBottom="-1dp"
-        android:adjustViewBounds="true"
+        android:adjustViewBounds="false"
         android:scaleType="centerCrop"
-        android:src="@android:color/transparent" />
+        android:src="@android:color/transparent"/>
+
+    <TextView
+        android:id="@+id/title1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:layout_marginRight="@dimen/_50sdp"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:gravity="left|center_vertical"
+        android:layout_below="@+id/image"
+        android:text="Text"
+        android:maxLines="1"
+        android:textAllCaps="true"
+        android:textColor="@color/on_boarding_txt_color"
+        android:visibility="visible"
+        android:textSize="@dimen/_18ssp" />
+
+    <TextView
+        android:id="@+id/title2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/_10sdp"
+        android:text="test2"
+        android:layout_marginRight="@dimen/_50sdp"
+        android:layout_marginLeft="@dimen/_50sdp"
+        android:layout_below="@+id/title1"
+        android:gravity="left"
+        android:textColor="@color/white"
+        android:visibility="visible"
+        android:textSize="@dimen/_10ssp" />
+
+
 
     <ImageView
         android:layout_width="@dimen/_50sdp"
         android:layout_height="@dimen/_50sdp"
-        android:src="@drawable/ew_whitelogo"
+        android:src="@drawable/logo1"
         android:layout_marginTop="@dimen/_40sdp"
         android:layout_marginLeft="@dimen/_25sdp"/>
 

@@ -7,7 +7,7 @@
 
         <variable
             name="predictThePictureQuesViewModel"
-            type="com.mexcelle.everywhendemo.viewModel.PredictThePictureQuesViewModel" />
+            type="com.mexcelle.thoughtifydemo.viewModel.PredictThePictureQuesViewModel" />
 
     </data>
 
@@ -56,6 +56,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
                     android:scrollbars="vertical"
+                    android:layout_marginBottom="@dimen/_35sdp"
                     android:fillViewport="true">
 
                     <RelativeLayout
@@ -97,17 +98,17 @@
                             android:layout_marginEnd="@dimen/_20sdp"
                             android:layout_marginBottom="@dimen/_20sdp"
                             android:gravity="center"
+                            android:visibility="gone"
                             android:text="Which animal has matched your intuition?"
                             android:textColor="@color/blue_txt_color"
                             android:textSize="@dimen/_16sdp" />
 
 
                         <androidx.recyclerview.widget.RecyclerView
-                            android:id="@+id/recyclerView"
+                            android:id="@+id/predict_recyclerView"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:layout_below="@+id/ques_id"
-
                             android:layout_marginStart="@dimen/_20sdp"
                             android:layout_marginTop="@dimen/_20sdp"
                             android:layout_marginEnd="@dimen/_20sdp"

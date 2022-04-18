@@ -10,25 +10,6 @@
         android:layout_height="match_parent"
         android:background="@drawable/result_gradiant">
 
-        <!-- <androidx.cardview.widget.CardView
-             android:layout_width="match_parent"
-             android:layout_height="match_parent"
-             android:layout_marginLeft="@dimen/_30sdp"
-             android:layout_marginTop="@dimen/_100sdp"
-             android:layout_marginRight="@dimen/_30sdp"
-             android:layout_marginBottom="@dimen/_100sdp"
-             app:cardCornerRadius="@dimen/_10sdp"
-             android:elevation="8dp"
-             android:padding="5dp">
-
-
-             <ImageView
-                 android:layout_width="match_parent"
-                 android:layout_height="match_parent"
-                 android:background="@drawable/bluebackground" />
-
-         </androidx.cardview.widget.CardView>-->
-
         <RelativeLayout
             android:id="@+id/relative_rl"
             android:layout_width="match_parent"
@@ -72,9 +53,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/_70sdp"
                 android:layout_below="@+id/result2_tv"
-                android:layout_marginLeft="@dimen/_10sdp"
+                android:layout_marginLeft="@dimen/_40sdp"
                 android:layout_marginTop="@dimen/_10sdp"
-                android:layout_marginRight="@dimen/_10sdp"
+                android:layout_marginRight="@dimen/_40sdp"
                 android:background="@drawable/rounded_corner_yellow_fill">
 
 
@@ -99,16 +80,14 @@
                     android:orientation="horizontal"
                     android:weightSum="4">
 
-                    <TextView
+                    <ImageView
                         android:id="@+id/txt2"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="@string/gem_fontawesome"
-                        android:textColor="@color/result_txt"
-                        android:textSize="@dimen/_14sdp" />
+                        android:src="@drawable/xp" />
 
                     <TextView
                         android:id="@+id/txt3"
@@ -121,16 +100,14 @@
                         android:textColor="@color/result_txt"
                         android:textSize="@dimen/_14sdp" />
 
-                    <TextView
+                    <ImageView
                         android:id="@+id/txt4"
                         android:layout_width="0dp"
                         android:layout_height="wrap_content"
                         android:layout_marginTop="@dimen/_5sdp"
                         android:layout_weight="1"
                         android:gravity="center_horizontal"
-                        android:text="@string/gem_fontawesome"
-                        android:textColor="@color/result_txt"
-                        android:textSize="@dimen/_14sdp" />
+                        android:src="@drawable/xp" />
 
                     <TextView
                         android:id="@+id/txt5"
@@ -162,8 +139,8 @@
                 android:gravity="center_horizontal"
                 android:text="Your next round commence in"
                 android:textColor="@color/white"
-                android:visibility="gone"
-                android:textSize="@dimen/_14ssp" />
+                android:textSize="@dimen/_14ssp"
+                android:visibility="visible" />
 
 
             <TextView
@@ -177,9 +154,9 @@
                 android:foregroundGravity="top"
                 android:gravity="center_horizontal"
                 android:text="3 DAYS 2 HOURS"
-                android:visibility="gone"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_14ssp" />
+                android:textSize="@dimen/_14ssp"
+                android:visibility="visible" />
 
         </RelativeLayout>
 
@@ -201,12 +178,23 @@
 
 
         <de.hdodenhof.circleimageview.CircleImageView
-            android:layout_width="@dimen/_80sdp"
-            android:layout_height="@dimen/_80sdp"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
             android:layout_centerHorizontal="true"
-            android:layout_marginTop="@dimen/_70sdp"
-            android:background="@drawable/bluebackground"
-            android:src="@drawable/ew_whitelogo" />
+            android:layout_marginTop="@dimen/_40sdp"
+            android:src="@drawable/wow_prediction" />
+
+
+        <TextView
+            android:id="@+id/wow_txt"
+            android:layout_width="@dimen/_120sdp"
+            android:layout_height="@dimen/_120sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:gravity="center"
+            android:text="WOW"
+            android:textColor="@color/result_txt"
+            android:textSize="@dimen/_16sdp" />
 
 
     </RelativeLayout>

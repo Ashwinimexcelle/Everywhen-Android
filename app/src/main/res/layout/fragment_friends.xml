@@ -6,7 +6,7 @@
 
         <variable
             name="friendsViewModel"
-            type="com.mexcelle.everywhendemo.viewModel.FriendsViewModel" />
+            type="com.mexcelle.thoughtifydemo.viewModel.FriendsViewModel" />
 
     </data>
 

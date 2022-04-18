@@ -1,11 +1,14 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:local="http://schemas.android.com/tools"
+    android:authorities="com.mexcelle.thoughtifydemo.fileprovider"
+    >
 
     <data class="ProfileFragmentBinding">
 
         <variable
             name="profileViewModel"
-            type="com.mexcelle.everywhendemo.viewModel.ProfileViewModel" />
+            type="com.mexcelle.thoughtifydemo.viewModel.ProfileViewModel" />
 
     </data>
 
@@ -13,12 +16,12 @@
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:background="@color/white"
-        android:layout_marginBottom="@dimen/_40sdp">
+        android:background="@color/white">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent">
+            android:layout_height="match_parent"
+            android:paddingBottom="@dimen/_40sdp">
 
             <ScrollView
                 android:layout_width="match_parent"
@@ -71,14 +74,15 @@
                             android:textSize="@dimen/_18sdp" />
 
                         <de.hdodenhof.circleimageview.CircleImageView
+                            android:id="@+id/user_image11"
                             android:layout_width="@dimen/_50sdp"
                             android:layout_height="@dimen/_50sdp"
+                            android:layout_alignParentRight="true"
                             android:layout_centerVertical="true"
-                            app:civ_border_color="@color/white"
-                            app:civ_border_width="@dimen/_2sdp"
-                            android:src="@drawable/google_icon"
                             android:layout_marginRight="@dimen/_50sdp"
-                            android:layout_alignParentRight="true"/>
+                            android:src="@drawable/google_icon"
+                            app:civ_border_color="@color/white"
+                            app:civ_border_width="@dimen/_2sdp" />
 
 
                     </RelativeLayout>
@@ -106,7 +110,10 @@
                         android:layout_marginRight="@dimen/_20sdp"
                         android:background="@drawable/rounded_corner_profile"
                         android:isScrollContainer="true"
-                        android:padding="@dimen/_10sdp" />
+                        android:paddingLeft="@dimen/_10ssp"
+                        android:text="@={profileViewModel.name}"
+                        android:textColor="@color/grey_txt11"
+                        android:textSize="@dimen/_10sdp" />
 
 
 
@@ -154,14 +161,16 @@
                                 android:textSize="@dimen/_16ssp" />
 
 
-                            <TextView
+                            <EditText
                                 android:id="@+id/location_tv1"
                                 android:layout_width="0dp"
                                 android:layout_height="match_parent"
                                 android:layout_weight="3.80"
                                 android:gravity="center_vertical"
-                                android:text="Where do you come from"
                                 android:textColor="@color/grey_txt11"
+                                android:paddingLeft="@dimen/_10sdp"
+                                android:background="@android:color/transparent"
+                                android:text="@={profileViewModel.location}"
                                 android:textSize="@dimen/_10ssp" />
                         </LinearLayout>
 
@@ -221,9 +230,23 @@
                             android:layout_height="match_parent"
                             android:layout_weight="4"
                             android:gravity="center_vertical"
-                            android:text="Caucasian"
+                            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
                             android:textColor="@color/grey_txt11"
                             android:textSize="@dimen/_10ssp" />
+
+
+                        <TextView
+                            android:id="@+id/ethinicity_spinnerId"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:gravity="center_vertical"
+                            android:visibility="gone"
+                            android:text="@={profileViewModel.ethinicity}"
+                            android:textColor="@color/grey_txt11"
+                            android:textSize="@dimen/_10ssp" />
+
+
                     </LinearLayout>
 
 
@@ -278,6 +301,9 @@
                                     android:layout_width="0dp"
                                     android:layout_height="@dimen/_40sdp"
                                     android:layout_weight="2"
+                                    android:textColor="@color/grey_txt11"
+                                    android:text="@={profileViewModel.age}"
+                                    android:textSize="@dimen/_10sdp"
                                     android:background="@android:color/transparent"
                                     android:gravity="center_vertical" />
 
@@ -326,11 +352,24 @@
 
 
                                 <Spinner
+                                    android:id="@+id/gender_spinner"
                                     android:layout_width="0dp"
                                     android:layout_height="@dimen/_40sdp"
                                     android:layout_weight="2"
                                     android:background="@android:color/transparent"
                                     android:gravity="center_vertical" />
+
+
+                                <TextView
+                                    android:id="@+id/gender_spinnerId"
+                                    android:layout_width="0dp"
+                                    android:layout_height="@dimen/_40sdp"
+                                    android:layout_weight="2"
+                                    android:text="@={profileViewModel.gender}"
+                                    android:background="@android:color/transparent"
+                                    android:gravity="center_vertical" />
+
+
 
                             </LinearLayout>
 
@@ -383,9 +422,23 @@
                             android:layout_height="match_parent"
                             android:layout_weight="4"
                             android:gravity="center_vertical"
-                            android:text="Caucasian"
+                            android:textColor="@color/grey_txt11"
+                            app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+                            android:textSize="@dimen/_10ssp" />
+
+
+                        <TextView
+                            android:id="@+id/accenstral_heritage_spinnerId"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="4"
+                            android:gravity="center_vertical"
+                            android:text="@={profileViewModel.ancestralHeritage}"
+                            android:visibility="gone"
                             android:textColor="@color/grey_txt11"
                             android:textSize="@dimen/_10ssp" />
+
+
                     </LinearLayout>
 
                     <TextView
@@ -397,6 +450,7 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_20sdp"
                         android:paddingLeft="@dimen/_5sdp"
+                        android:textSize="@dimen/_12sdp"
                         android:text="Describe Yourself"
                         android:textColor="@color/grey_txt11" />
 
@@ -409,8 +463,13 @@
                         android:layout_marginTop="@dimen/_10sdp"
                         android:layout_marginRight="@dimen/_20sdp"
                         android:background="@drawable/rounded_corner_profile"
+                        android:gravity="top"
                         android:isScrollContainer="true"
-                        android:padding="@dimen/_10sdp" />
+                        android:paddingLeft="@dimen/_10sdp"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:text="@={profileViewModel.bio}"
+                        android:textColor="@color/grey_txt11"
+                        android:textSize="@dimen/_10sdp" />
 
                     <View
                         android:id="@+id/line_view1"
@@ -495,9 +554,10 @@
                         android:layout_marginStart="@dimen/_20sdp"
                         android:layout_marginTop="@dimen/_20sdp"
                         android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
                         android:background="@drawable/gradiant_bg1"
                         android:gravity="center"
-                        android:text="Continue"
+                        android:text="Save"
                         android:textColor="@color/white" />
 
                 </RelativeLayout>

@@ -10,7 +10,7 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:scaleType="fitXY"
-        android:src="@drawable/prelude_screen" />
+        android:src="@drawable/prelude_screen1" />
 
 
     <RelativeLayout
@@ -22,34 +22,70 @@
             android:id="@+id/prelude_txt1"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginLeft="@dimen/_40sdp"
+            android:layout_marginLeft="@dimen/_20sdp"
             android:layout_marginTop="@dimen/_190sdp"
             android:layout_marginRight="@dimen/_40sdp"
             android:layout_marginBottom="@dimen/_20sdp"
-            android:gravity="center_horizontal"
+            android:alpha="0"
+            android:gravity="left"
             android:text="The EveryWhenTM app platform allows
 thousands of people to simultaneously
 share predictions about the same event
-in a game-like format.\n\n
+in a game-like format."
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <TextView
+            android:id="@+id/prelude_txt4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/prelude_txt1"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:alpha="0"
+            android:gravity="left"
+            android:text="
 The wisdom of crowds, first described by
 Sir Francis Galton in 1907, shows
 collective decisions are better than
-individual decisions.\n\n
-EveryWhen repurposes this wisdom in a
+individual decisions."
+            android:textColor="@color/white"
+            android:textSize="@dimen/_12ssp" />
+
+
+        <TextView
+            android:id="@+id/prelude_txt3"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/prelude_txt4"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_40sdp"
+            android:layout_marginBottom="@dimen/_20sdp"
+            android:alpha="0"
+            android:gravity="left"
+            android:text="EveryWhen repurposes this wisdom in a
 whole new way:"
             android:textColor="@color/white"
             android:textSize="@dimen/_12ssp" />
+
 
         <TextView
             android:id="@+id/prelude_txt2"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/proceed_btn"
-            android:textColor="@color/border"
-            android:gravity="center_horizontal"
+            android:layout_below="@+id/prelude_txt3"
+            android:layout_marginLeft="@dimen/_20sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginRight="@dimen/_40sdp"
+            android:alpha="0"
+            android:gravity="left"
             android:text="To leverage collective intuition"
-            android:textSize="@dimen/_16ssp"
-            android:layout_below="@+id/prelude_txt1" />
+            android:textColor="@color/border"
+            android:textSize="@dimen/_16ssp" />
 
 
         <TextView
@@ -61,6 +97,7 @@ whole new way:"
             android:layout_marginBottom="@dimen/_50sdp"
             android:background="@drawable/onboarding_proceed_button"
             android:gravity="center"
+            android:alpha="0"
             android:text="@string/proceed_txt"
             android:textColor="@color/primary"
             android:textSize="@dimen/_12sdp" />

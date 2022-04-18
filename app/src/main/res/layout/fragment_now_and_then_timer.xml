@@ -6,7 +6,7 @@
 
         <variable
             name="nowAndThenTimerViewModel"
-            type="com.mexcelle.everywhendemo.viewModel.NowAndThenTimerViewModel" />
+            type="com.mexcelle.thoughtifydemo.viewModel.NowAndThenTimerViewModel" />
 
     </data>
 
@@ -27,9 +27,7 @@
                 android:layout_marginTop="@dimen/_180sdp"
                 android:layout_marginRight="@dimen/_40sdp"
                 android:gravity="center"
-                android:text="Who will be elected
-as the United States
-president in 2024?"
+                android:text=""
                 android:textColor="@color/white"
                 android:textSize="@dimen/_16sdp" />
 
@@ -37,14 +35,37 @@ president in 2024?"
                 android:id="@+id/timer1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/text_1"
                 android:layout_marginTop="@dimen/_80sdp"
-                android:text="Your time starts in"
                 android:gravity="center_horizontal"
+                android:text="Your time starts in"
                 android:textColor="@color/white"
-                android:textSize="@dimen/_12sdp"
-                android:layout_below="@+id/text_1"/>
+                android:textSize="@dimen/_12sdp" />
 
 
+            <ImageView
+                android:id="@+id/imageview_timer1"
+                android:layout_width="@dimen/_70sdp"
+                android:layout_height="@dimen/_70sdp"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/timer"
+                android:visibility="gone"
+                android:layout_below="@+id/timer1"
+                android:layout_marginTop="@dimen/_80sdp"
+                android:gravity="center_horizontal" />
+
+
+            <com.airbnb.lottie.LottieAnimationView
+
+                android:id="@+id/nav_btn"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_100sdp"
+                android:layout_below="@+id/timer1"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="@dimen/_50sdp"
+                app:lottie_autoPlay="false"
+                app:lottie_loop="true"
+                app:lottie_rawRes="@raw/countdown_timer" />
 
         </RelativeLayout>
 

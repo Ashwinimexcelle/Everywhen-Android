@@ -14,29 +14,37 @@
         android:src="@drawable/background_pattern" />
 
     <de.hdodenhof.circleimageview.CircleImageView
-        android:id="@+id/user_imageView"
+        android:id="@+id/h_user_imageView"
         android:layout_width="@dimen/_55sdp"
         android:layout_height="@dimen/_55sdp"
         android:layout_marginLeft="@dimen/_30sdp"
         android:layout_marginTop="@dimen/_60sdp"
         android:contentDescription="@string/nav_header_desc"
-        android:paddingTop="@dimen/nav_header_vertical_spacing"
         android:src="@mipmap/ic_launcher"
         android:visibility="visible"
         app:civ_border_color="@color/white"
         app:civ_border_width="@dimen/_2sdp" />
 
+    <ImageView
+        android:layout_width="@dimen/_35sdp"
+        android:layout_height="@dimen/_35sdp"
+        android:layout_marginTop="@dimen/_70sdp"
+        android:layout_marginLeft="@dimen/_10sdp"
+        android:layout_toRightOf="@+id/h_user_imageView"
+        android:layout_marginRight="@dimen/_40sdp"
+        android:src="@drawable/badge" />
+
+
     <TextView
         android:id="@+id/user_name"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/user_imageView"
+        android:layout_below="@+id/h_user_imageView"
         android:layout_marginLeft="@dimen/_30sdp"
         android:layout_marginTop="@dimen/_10sdp"
         android:text="Clara Davis"
         android:textSize="@dimen/_14ssp"
         android:textColor="@color/white" />
-
 
     <TextView
         android:id="@+id/user_emailid"
@@ -48,14 +56,5 @@
         android:text="Tech Envalagist"
         android:textColor="@color/white"
         android:textSize="@dimen/_10ssp" />
-
-
-    <ImageView
-        android:layout_width="@dimen/_35sdp"
-        android:layout_height="@dimen/_35sdp"
-        android:layout_below="@+id/user_imageView"
-        android:layout_alignParentRight="true"
-        android:layout_marginRight="@dimen/_20sdp"
-        android:src="@drawable/badge" />
 
 </RelativeLayout>

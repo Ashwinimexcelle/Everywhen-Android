@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "945366379461",
+    "project_id": "everywhendemo",
+    "storage_bucket": "everywhendemo.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:945366379461:android:30d343519579f5bc1f79ac",
+        "android_client_info": {
+          "package_name": "com.mexcelle.everywhendemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "945366379461-lqnvf8nvh3s0mal0qkahaa19nf70g90r.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.mexcelle.everywhendemo",
+            "certificate_hash": "5929e4cdcc248c80ebe5bebea44fae192ecd2456"
+          }
+        },
+        {
+          "client_id": "945366379461-aed9qnoonqdv12551hesp18lfgvn9uks.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA7_oAsyQI3upjrn-EJP2Qe68qrEwe8dlM"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "945366379461-aed9qnoonqdv12551hesp18lfgvn9uks.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

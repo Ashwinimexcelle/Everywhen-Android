@@ -7,7 +7,7 @@
 
         <variable
             name="otpScreenViewModel"
-            type="com.mexcelle.everywhendemo.viewModel.OTPViewModel" />
+            type="com.mexcelle.thoughtifydemo.viewModel.OTPViewModel" />
 
     </data>
 
@@ -71,6 +71,8 @@
             android:layout_marginRight="@dimen/_10sdp"
             android:layout_toLeftOf="@+id/check_tv"
             android:background="@drawable/rounded_corner_edittext"
+            android:inputType="number"
+            android:paddingLeft="@dimen/_10sdp"
             android:text="@={otpScreenViewModel.otp}"
             android:textColor="@color/txt_color"
             android:textSize="@dimen/_10sdp" />
@@ -86,6 +88,7 @@
             android:layout_marginRight="@dimen/_30sdp"
             android:gravity="center"
             android:text="@string/check_fontawesome"
+            android:visibility="gone"
             android:textColor="@color/check_color"
             android:textSize="@dimen/_14sdp" />
 

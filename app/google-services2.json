@@ -1,0 +1,4189 @@
+{
+	"info": {
+		"_postman_id": "4be0d554-698c-4318-8092-c11f6641bf85",
+		"name": "EveryWhen Copy",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "User",
+			"item": [
+				{
+					"name": "Signup",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "cb9aff034dbb3947aa7cda1b92d9d27a",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"jiren\",\n    \"email\": \"Jirenpatel1@Gmail.com\",\n    \"password\": \"password1\",\n    \"notificatioToken\": \"notification_token-123\",\n    \"deviceId\": \"deviceId-1\",\n    \"avatar\": \"\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/users/sign_up",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"sign_up"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Signup",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"value": "cb9aff034dbb3947aa7cda1b92d9d27a",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"username\": \"jiren\",\n    \"email\": \"Jirenpatel1@Gmail.com\",\n    \"password\": \"password1\",\n    \"notificatioToken\": \"notification_token-123\",\n    \"deviceId\": \"deviceId-1\",\n    \"avatar\": \"\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/users/sign_up",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"sign_up"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "272"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"110-rD1fnLbvoDxzQePeeP5CS2lsT3M\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:15:35 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"621eef665f2bcb68f4810db3\",\n    \"username\": \"jiren\",\n    \"avatar\": \"\",\n    \"email\": \"jirenpatel1@gmail.com\",\n    \"role\": \"user\",\n    \"surveyCompleted\": false,\n    \"skipSurveyCount\": 0,\n    \"quizCompleted\": false,\n    \"skipQuizCount\": 0,\n    \"otpToken\": \"1e787eb493fd3ea22d31d1ca020a3fee7052079a63c8a416a2bb80fe82007c3d\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Email Confirmation OTP",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"1e787eb493fd3ea22d31d1ca020a3fee7052079a63c8a416a2bb80fe82007c3d\",\n    \"otp\": 2822\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/verify_otp",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"verify_otp"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Email Confirmation OTP",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"token\": \"1e787eb493fd3ea22d31d1ca020a3fee7052079a63c8a416a2bb80fe82007c3d\",\n    \"otp\": 2822\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/verify_otp",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"verify_otp"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "341"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"155-a4+zvItxlv/WOwhEHq79bnrwXPs\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:16:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"621eef665f2bcb68f4810db3\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWVlZjY2NWYyYmNiNjhmNDgxMGRiMyIsImlhdCI6MTY0NjE5NDU2NH0.a_mVjQeVWi-DOz9WGqyoVPyWaz1NxTu2du7L0sjRZ44\",\n    \"username\": \"jiren\",\n    \"email\": \"jirenpatel1@gmail.com\",\n    \"role\": \"user\",\n    \"surveyCompleted\": false,\n    \"skipSurveyCount\": 0,\n    \"quizCompleted\": false,\n    \"skipQuizCount\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Guest User Signin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"notificationToken\": \"notification_token-guest-1\",\n    \"deviceId\": \"deviceId-112331\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/users/guest_sign_in",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"guest_sign_in"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Resent confirmation email",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"Jirenpatel5@Gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/users/resend_confirmation_email",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"resend_confirmation_email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Signin",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"1r6q3g9a@temporary-mail.net\",\n    \"password\": \"password1\",\n    \"notificatioToken\": \"notificatioToken-123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/users/sign_in",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"sign_in"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Signin",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"Jirenpatel1@Gmail.com\",\n    \"password\": \"password1\",\n    \"notificatioToken\": \"notificatioToken-123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/users/sign_in",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"sign_in"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "763"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2fb-7W7wxYKdUFYJ7S0I8ku9MFFcIFQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:17:11 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"621eef665f2bcb68f4810db3\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWVlZjY2NWYyYmNiNjhmNDgxMGRiMyIsImlhdCI6MTY0NjE5NDYzMX0.ePUdhFN791JOb1jcJ-Pi_Ga-WCQlWaVNtTDljl9Cd7k\",\n    \"username\": \"jiren\",\n    \"email\": \"jirenpatel1@gmail.com\",\n    \"role\": \"user\",\n    \"surveyCompleted\": false,\n    \"skipSurveyCount\": 0,\n    \"quizCompleted\": false,\n    \"skipQuizCount\": 0,\n    \"stats\": {\n        \"league\": {\n            \"id\": \"621eee3125753e878d061b17\",\n            \"name\": \"Bronze\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/bronze.png\",\n            \"description\": \"Complete 20% + to unlock Bronze leagues\"\n        },\n        \"todaysTrials\": 0,\n        \"totalPredictPictures\": 0,\n        \"correctPredictPictures\": 0,\n        \"totalStreaks\": 0,\n        \"streakProgress\": 0,\n        \"points\": 0,\n        \"currencies\": {\n            \"rubies\": 0,\n            \"emeralds\": 0\n        },\n        \"unlockNowAndThen\": false,\n        \"nowThen\": {\n            \"total\": 0,\n            \"correct\": 0,\n            \"incorrect\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Signin Copy",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"lp-user0@example.com\",\n    \"password\": \"password1\",\n    \"notificatioToken\": \"notificatioToken-123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/users/sign_in",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"sign_in"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Signin Copy",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\": \"lp-user0@example.com\",\n    \"password\": \"password1\",\n    \"notificatioToken\": \"notificatioToken-123\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/users/sign_in",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"sign_in"
+									]
+								}
+							},
+							"status": "Precondition Failed",
+							"code": 412,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "40"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"28-0LX3NsLhr5EtKG9QHaZkJre5CmM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:18:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid email or password.\"\n}"
+						}
+					]
+				},
+				{
+					"name": "1. Forgot Password request",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"Jirenpatel@Gmail.com\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/users/forgot_password",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"forgot_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "2. Reset Password OTP Verify",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"079423020e3ec8aa2c6e5adeba58fd985ad44c9c0d5ff895109ebe8f26a82de3\",\n    \"otp\": 7362\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/verify_otp",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"verify_otp"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "3. Reset Password Using OTP token",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"token\": \"079423020e3ec8aa2c6e5adeba58fd985ad44c9c0d5ff895109ebe8f26a82de3\",\n    \"password\": \"password123\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/users/reset_password",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"reset_password"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Profile",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "{{auth-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/users",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"value": "{{auth-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/users/",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "616"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"268-mT+ECK2Wka4HtKuJ9XQ9zri2JiY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:18:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"621eef665f2bcb68f4810db3\",\n    \"username\": \"jiren\",\n    \"avatar\": \"\",\n    \"email\": \"jirenpatel1@gmail.com\",\n    \"role\": \"user\",\n    \"surveyCompleted\": false,\n    \"skipSurveyCount\": 0,\n    \"quizCompleted\": false,\n    \"skipQuizCount\": 0,\n    \"stats\": {\n        \"league\": {\n            \"id\": \"621eee3125753e878d061b17\",\n            \"name\": \"Bronze\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/bronze.png\",\n            \"description\": \"Complete 20% + to unlock Bronze leagues\"\n        },\n        \"todaysTrials\": 0,\n        \"totalPredictPictures\": 0,\n        \"correctPredictPictures\": 0,\n        \"totalStreaks\": 0,\n        \"streakProgress\": 0,\n        \"points\": 0,\n        \"currencies\": {\n            \"rubies\": 0,\n            \"emeralds\": 0\n        },\n        \"unlockNowAndThen\": false,\n        \"nowThen\": {\n            \"total\": 0,\n            \"correct\": 0,\n            \"incorrect\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "User Profile Image",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/images/6238459377690d2cac756de1.png",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"images",
+								"6238459377690d2cac756de1.png"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"value": "{{auth-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/users/",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "616"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"268-mT+ECK2Wka4HtKuJ9XQ9zri2JiY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:18:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"621eef665f2bcb68f4810db3\",\n    \"username\": \"jiren\",\n    \"avatar\": \"\",\n    \"email\": \"jirenpatel1@gmail.com\",\n    \"role\": \"user\",\n    \"surveyCompleted\": false,\n    \"skipSurveyCount\": 0,\n    \"quizCompleted\": false,\n    \"skipQuizCount\": 0,\n    \"stats\": {\n        \"league\": {\n            \"id\": \"621eee3125753e878d061b17\",\n            \"name\": \"Bronze\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/bronze.png\",\n            \"description\": \"Complete 20% + to unlock Bronze leagues\"\n        },\n        \"todaysTrials\": 0,\n        \"totalPredictPictures\": 0,\n        \"correctPredictPictures\": 0,\n        \"totalStreaks\": 0,\n        \"streakProgress\": 0,\n        \"points\": 0,\n        \"currencies\": {\n            \"rubies\": 0,\n            \"emeralds\": 0\n        },\n        \"unlockNowAndThen\": false,\n        \"nowThen\": {\n            \"total\": 0,\n            \"correct\": 0,\n            \"incorrect\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "User Profile Image Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "{{auth-token}}",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ShekharPC/Downloads/animal set/animal set/crocodile.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/users/profile_image",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"profile_image"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "User Profile",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"value": "{{api-key}}",
+										"type": "text"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"value": "{{auth-token}}",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/users/",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "616"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"268-mT+ECK2Wka4HtKuJ9XQ9zri2JiY\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:18:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"621eef665f2bcb68f4810db3\",\n    \"username\": \"jiren\",\n    \"avatar\": \"\",\n    \"email\": \"jirenpatel1@gmail.com\",\n    \"role\": \"user\",\n    \"surveyCompleted\": false,\n    \"skipSurveyCount\": 0,\n    \"quizCompleted\": false,\n    \"skipQuizCount\": 0,\n    \"stats\": {\n        \"league\": {\n            \"id\": \"621eee3125753e878d061b17\",\n            \"name\": \"Bronze\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/bronze.png\",\n            \"description\": \"Complete 20% + to unlock Bronze leagues\"\n        },\n        \"todaysTrials\": 0,\n        \"totalPredictPictures\": 0,\n        \"correctPredictPictures\": 0,\n        \"totalStreaks\": 0,\n        \"streakProgress\": 0,\n        \"points\": 0,\n        \"currencies\": {\n            \"rubies\": 0,\n            \"emeralds\": 0\n        },\n        \"unlockNowAndThen\": false,\n        \"nowThen\": {\n            \"total\": 0,\n            \"correct\": 0,\n            \"incorrect\": 0\n        }\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Get User Avatart Upload direct url",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/users/avatar_upload_url",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"avatar_upload_url"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get User Avatart Upload direct url",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"type": "text",
+										"value": "{{auth-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/users/avatar_upload_url",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"users",
+										"avatar_upload_url"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "226"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e2-I7VvANUL+/9g4qkfW/KG2oYlvXo\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:19:02 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"url\": \"https://everywhen.blob.core.windows.net/useravatars/621eef665f2bcb68f4810db3.png?sv=2020-10-02&st=2022-03-02T04%3A19%3A02Z&se=2022-03-02T04%3A20%3A32Z&sr=b&sp=cw&sig=6NO%2BfukEN9Ju3bqQy%2FVeFXGTDwo4pV0kpTcgGSopgsQ%3D\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Upload File using direct upload url",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}",
+								"disabled": true
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}",
+								"disabled": true
+							},
+							{
+								"key": "x-ms-blob-type",
+								"value": "BlockBlob",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "image/png",
+								"type": "text",
+								"disabled": true
+							},
+							{
+								"key": "x-ms-date",
+								"value": "2020-08-25",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "file",
+							"file": {
+								"src": "/Users/jiren/Downloads/Flairs and avatar/Avatar/ios/default_1.png"
+							}
+						},
+						"url": {
+							"raw": "https://everywhen.blob.core.windows.net/useravatars/5f40b525df752ae057248a45.png?sv=2019-12-12&st=2020-08-25T11%3A20%3A04Z&se=2020-08-25T11%3A21%3A30Z&sr=b&sp=cw&sig=VCtWk2UXFt7y6LGxx%2FLXlh5TqSUqjO05AJivTGd24WQ%3D",
+							"protocol": "https",
+							"host": [
+								"everywhen",
+								"blob",
+								"core",
+								"windows",
+								"net"
+							],
+							"path": [
+								"useravatars",
+								"5f40b525df752ae057248a45.png"
+							],
+							"query": [
+								{
+									"key": "sv",
+									"value": "2019-12-12"
+								},
+								{
+									"key": "st",
+									"value": "2020-08-25T11%3A20%3A04Z"
+								},
+								{
+									"key": "se",
+									"value": "2020-08-25T11%3A21%3A30Z"
+								},
+								{
+									"key": "sr",
+									"value": "b"
+								},
+								{
+									"key": "sp",
+									"value": "cw"
+								},
+								{
+									"key": "sig",
+									"value": "VCtWk2UXFt7y6LGxx%2FLXlh5TqSUqjO05AJivTGd24WQ%3D"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Profile Update",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"bio\": \"test 1 2  \"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/users",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "User Update notification token",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"notificationToken\": \"111-1121211\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/users/notification_token",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"users",
+								"notification_token"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Survey",
+			"item": [
+				{
+					"name": "Survey Details & Questions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/survey",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"survey"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Skip Survey",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/survey/skip",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"survey",
+								"skip"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Submit User Survey",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"id\": \"5f3ed0afe7139ca17f203c6c\",\n        \"answer\": \"30-39\" \n    },{\n        \"id\": \"5f3ed0afe7139ca17f203c6d\",\n        \"answer\": \"Male\" \n    },{\n        \"id\": \"5f3ed0afe7139ca17f203c6e\",\n        \"answer\": \"India\" \n    },{\n        \"id\": \"5f3ed0afe7139ca17f203c6f\",\n        \"answer\": \"None\" \n    },{\n        \"id\": \"5f3ed0afe7139ca17f203c70\",\n        \"answer\": \"No\" \n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/survey/user",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"survey",
+								"user"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PredictPicture",
+			"item": [
+				{
+					"name": "Get session with pictures - Rapid",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/predict_pictures?mode=rapid",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"predict_pictures"
+							],
+							"query": [
+								{
+									"key": "mode",
+									"value": "rapid"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get session with pictures - Rapid",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"type": "text",
+										"value": "{{auth-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/predict_pictures?mode=rapid",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"predict_pictures"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "rapid"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "10716"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29dc-22VTmW0ihV50+KCFT3enbPu1gCw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:19:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"621ef04c5f2bcb68f4810e0b\",\n    \"session\": 1646194755,\n    \"totalPlayers\": 0,\n    \"randomize\": false,\n    \"pictures\": [\n        {\n            \"pictures\": [\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/11.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/8.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/10.jpg\"\n                }\n            ],\n            \"answer\": 2,\n            \"setNum\": 0\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/47.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/38.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/44.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/42.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/45.jpg\"\n                }\n            ],\n            \"answer\": 4,\n            \"setNum\": 1\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/20.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/19.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/15.jpg\"\n                }\n            ],\n            \"answer\": 1,\n            \"setNum\": 2\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/9.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/6.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/1.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/11.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/7.jpg\"\n                }\n            ],\n            \"answer\": 4,\n            \"setNum\": 3\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/10.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/11.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/9.jpg\"\n                }\n            ],\n            \"answer\": 0,\n            \"setNum\": 4\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/35.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/22.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/34.jpg\"\n                }\n            ],\n            \"answer\": 3,\n            \"setNum\": 5\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/9.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/5.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/7.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/3.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/11.jpg\"\n                }\n            ],\n            \"answer\": 3,\n            \"setNum\": 6\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/17.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/19.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/14.jpg\"\n                }\n            ],\n            \"answer\": 1,\n            \"setNum\": 7\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/28.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/35.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/23.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/34.jpg\"\n                }\n            ],\n            \"answer\": 0,\n            \"setNum\": 8\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/11.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/6.jpg\"\n                }\n            ],\n            \"answer\": 0,\n            \"setNum\": 9\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/27.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/28.jpg\"\n                }\n            ],\n            \"answer\": 3,\n            \"setNum\": 10\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/20.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/16.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/19.jpg\"\n                }\n            ],\n            \"answer\": 5,\n            \"setNum\": 11\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/46.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/43.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/44.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/38.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/40.jpg\"\n                }\n            ],\n            \"answer\": 4,\n            \"setNum\": 12\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/42.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/48.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/49.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/45.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/47.jpg\"\n                }\n            ],\n            \"answer\": 5,\n            \"setNum\": 13\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/9.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/11.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/7.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/2.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/4.jpg\"\n                }\n            ],\n            \"answer\": 2,\n            \"setNum\": 14\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/40.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/45.jpg\"\n                }\n            ],\n            \"answer\": 4,\n            \"setNum\": 15\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/30.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/37.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/27.jpg\"\n                }\n            ],\n            \"answer\": 3,\n            \"setNum\": 16\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/35.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/26.jpg\"\n                }\n            ],\n            \"answer\": 0,\n            \"setNum\": 17\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/20.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n                }\n            ],\n            \"answer\": 3,\n            \"setNum\": 18\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/9.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/1.jpg\"\n                }\n            ],\n            \"answer\": 5,\n            \"setNum\": 19\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/23.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/27.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/34.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/29.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/33.jpg\"\n                }\n            ],\n            \"answer\": 2,\n            \"setNum\": 20\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/16.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/19.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/21.jpg\"\n                }\n            ],\n            \"answer\": 5,\n            \"setNum\": 21\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/24.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/25.jpg\"\n                }\n            ],\n            \"answer\": 2,\n            \"setNum\": 22\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/21.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/19.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/16.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/14.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/20.jpg\"\n                }\n            ],\n            \"answer\": 4,\n            \"setNum\": 23\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/14.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/13.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/15.jpg\"\n                }\n            ],\n            \"answer\": 2,\n            \"setNum\": 24\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/13.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/19.jpg\"\n                }\n            ],\n            \"answer\": 3,\n            \"setNum\": 25\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/33.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/28.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/25.jpg\"\n                }\n            ],\n            \"answer\": 4,\n            \"setNum\": 26\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/15.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/16.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/17.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/13.jpg\"\n                }\n            ],\n            \"answer\": 2,\n            \"setNum\": 27\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/10.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/2.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/12.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/8.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/5.jpg\"\n                }\n            ],\n            \"answer\": 0,\n            \"setNum\": 28\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/17.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/20.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/15.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/13.jpg\"\n                }\n            ],\n            \"answer\": 3,\n            \"setNum\": 29\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get session with pictures new API",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/predict_pictures?mode=new",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"predict_pictures"
+							],
+							"query": [
+								{
+									"key": "mode",
+									"value": "new"
+								}
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get session with pictures - Rapid",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"type": "text",
+										"value": "{{auth-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/predict_pictures?mode=rapid",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"predict_pictures"
+									],
+									"query": [
+										{
+											"key": "mode",
+											"value": "rapid"
+										}
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "10716"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"29dc-22VTmW0ihV50+KCFT3enbPu1gCw\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:19:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"621ef04c5f2bcb68f4810e0b\",\n    \"session\": 1646194755,\n    \"totalPlayers\": 0,\n    \"randomize\": false,\n    \"pictures\": [\n        {\n            \"pictures\": [\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/11.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/8.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/10.jpg\"\n                }\n            ],\n            \"answer\": 2,\n            \"setNum\": 0\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/47.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/38.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/44.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/42.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/45.jpg\"\n                }\n            ],\n            \"answer\": 4,\n            \"setNum\": 1\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/20.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/19.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/15.jpg\"\n                }\n            ],\n            \"answer\": 1,\n            \"setNum\": 2\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/9.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/6.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/1.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/11.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/7.jpg\"\n                }\n            ],\n            \"answer\": 4,\n            \"setNum\": 3\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/10.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/11.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/9.jpg\"\n                }\n            ],\n            \"answer\": 0,\n            \"setNum\": 4\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/35.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/22.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/34.jpg\"\n                }\n            ],\n            \"answer\": 3,\n            \"setNum\": 5\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/9.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/5.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/7.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/3.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/11.jpg\"\n                }\n            ],\n            \"answer\": 3,\n            \"setNum\": 6\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/17.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/19.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/14.jpg\"\n                }\n            ],\n            \"answer\": 1,\n            \"setNum\": 7\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/28.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/35.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/23.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/34.jpg\"\n                }\n            ],\n            \"answer\": 0,\n            \"setNum\": 8\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/11.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/6.jpg\"\n                }\n            ],\n            \"answer\": 0,\n            \"setNum\": 9\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/27.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/28.jpg\"\n                }\n            ],\n            \"answer\": 3,\n            \"setNum\": 10\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/20.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/16.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/19.jpg\"\n                }\n            ],\n            \"answer\": 5,\n            \"setNum\": 11\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/46.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/43.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/44.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/38.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/40.jpg\"\n                }\n            ],\n            \"answer\": 4,\n            \"setNum\": 12\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/42.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/48.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/49.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/45.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/47.jpg\"\n                }\n            ],\n            \"answer\": 5,\n            \"setNum\": 13\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/9.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/11.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/7.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/2.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/4.jpg\"\n                }\n            ],\n            \"answer\": 2,\n            \"setNum\": 14\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/40.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/45.jpg\"\n                }\n            ],\n            \"answer\": 4,\n            \"setNum\": 15\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/30.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/37.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/27.jpg\"\n                }\n            ],\n            \"answer\": 3,\n            \"setNum\": 16\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/35.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/26.jpg\"\n                }\n            ],\n            \"answer\": 0,\n            \"setNum\": 17\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/20.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n                }\n            ],\n            \"answer\": 3,\n            \"setNum\": 18\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/9.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/1.jpg\"\n                }\n            ],\n            \"answer\": 5,\n            \"setNum\": 19\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/23.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/27.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/34.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/29.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/33.jpg\"\n                }\n            ],\n            \"answer\": 2,\n            \"setNum\": 20\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/16.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/19.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/21.jpg\"\n                }\n            ],\n            \"answer\": 5,\n            \"setNum\": 21\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/24.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/25.jpg\"\n                }\n            ],\n            \"answer\": 2,\n            \"setNum\": 22\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/21.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/19.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/16.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/14.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/20.jpg\"\n                }\n            ],\n            \"answer\": 4,\n            \"setNum\": 23\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/14.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/13.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/15.jpg\"\n                }\n            ],\n            \"answer\": 2,\n            \"setNum\": 24\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/13.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/19.jpg\"\n                }\n            ],\n            \"answer\": 3,\n            \"setNum\": 25\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/33.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/28.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/25.jpg\"\n                }\n            ],\n            \"answer\": 4,\n            \"setNum\": 26\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/15.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/16.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/17.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/13.jpg\"\n                }\n            ],\n            \"answer\": 2,\n            \"setNum\": 27\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/10.jpg\"\n                },\n                {\n                    \"position\": 1,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/2.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/12.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/8.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/5.jpg\"\n                }\n            ],\n            \"answer\": 0,\n            \"setNum\": 28\n        },\n        {\n            \"pictures\": [\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/17.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n                },\n                {\n                    \"position\": 4,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/20.jpg\"\n                },\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/15.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/13.jpg\"\n                }\n            ],\n            \"answer\": 3,\n            \"setNum\": 29\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get session with pictures - Calm",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/predict_pictures",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"predict_pictures"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get session with pictures - Calm",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"type": "text",
+										"value": "{{auth-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/predict_pictures",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"predict_pictures"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "490"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1ea-UjFiYWqD5CD3GkhgcD+k4ADbJGM\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:21:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": \"621ef0b05f2bcb68f4810e0e\",\n    \"session\": 1646194860,\n    \"totalPlayers\": 0,\n    \"randomize\": true,\n    \"pictures\": [\n        {\n            \"pictures\": [\n                {\n                    \"position\": 0,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/16.jpg\"\n                },\n                {\n                    \"position\": 3,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/20.jpg\"\n                },\n                {\n                    \"position\": 5,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n                },\n                {\n                    \"position\": 2,\n                    \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/21.jpg\"\n                }\n            ],\n            \"answer\": 0,\n            \"setNum\": 0\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Record user anwers - repid",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"setNum\": 0,\n        \"position\": 4, \n        \"coordinates\": [-104.9903, 39.7392],\n        \"gyro\": [1.1,2.2,4.5],\n        \"touchPressure\": 1.4\n    },\n    {\n        \"setNum\": 1,\n        \"position\": 5, \n        \"coordinates\": [-104.9903, 39.7392],\n        \"gyro\": [1.1,2.2,4.5],\n        \"touchPressure\": 1.4\n    },\n    {\n        \"setNum\": 2,\n        \"position\": 2, \n        \"coordinates\": [-104.9903, 39.7392],\n        \"gyro\": [1.1,2.2,4.5],\n        \"touchPressure\": 1.4\n    },\n    {\n        \"setNum\": 3,\n        \"position\": 2, \n        \"coordinates\": [-104.9903, 39.7392],\n        \"gyro\": [1.1,2.2,4.5],\n        \"touchPressure\": 1.4\n    },\n    {\n        \"setNum\": 4,\n        \"position\": 0, \n        \"coordinates\": [-104.9903, 39.7392],\n        \"gyro\": [1.1,2.2,4.5],\n        \"touchPressure\": 1.4\n    }\n\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/predict_pictures/5f7f0b7d816ddf3cbfb857d9/answers",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"predict_pictures",
+								"5f7f0b7d816ddf3cbfb857d9",
+								"answers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Record user anwers - calm",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmN2RmNjAwODVlNmZiMmI1OWQ4MmE3NyIsImlhdCI6MTYwMjE2MTY5NX0.4qZ2p3El10LC12XkHiZh15CnnF4lc2-6z38nhA0HVdc"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"coordinates\": [\n            37.785834,\n            -122.406417\n        ],\n        \"gyro\": [\n            null,\n            null,\n            null\n        ],\n        \"position\": 1,\n        \"setNum\": 0\n    }\n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/predict_pictures/5f7f0c63e187253cde0896a1/answers",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"predict_pictures",
+								"5f7f0c63e187253cde0896a1",
+								"answers"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create picture",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "{{auth-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "group",
+									"value": "621dc643aa2430044bf561d8",
+									"type": "text"
+								},
+								{
+									"key": "image",
+									"type": "file",
+									"src": "/C:/Users/ShekharPC/Downloads/insert-picture-icon.png"
+								}
+							]
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/admin/pictures",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"admin",
+								"pictures"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List of Picture Group",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "{{auth-token}}",
+								"type": "text"
+							},
+							{
+								"key": "Content-Type",
+								"value": "multipart/form-data",
+								"type": "text",
+								"disabled": true
+							}
+						],
+						"url": {
+							"raw": "{{api-endpoint}}/admin/picture_groups",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"admin",
+								"picture_groups"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Pictures",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "{{auth-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api-endpoint}}/admin/pictures-by-group?groupName=animals",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"admin",
+								"pictures-by-group"
+							],
+							"query": [
+								{
+									"key": "groupName",
+									"value": "animals"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Now And Then Questions",
+			"item": [
+				{
+					"name": "Get todays questions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/now_then_question",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"now_then_question"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get todays questions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"type": "text",
+										"value": "{{auth-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/now_then_question",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"now_then_question"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "210"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d2-1iYv5GaLSn5UuxJdQk/ecFBDy4U\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:22:41 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"questions\": [\n        {\n            \"id\": \"621eee646792a66886a32aa1\",\n            \"title\": \"Will the Dow Jones close higher tomorrow than today?\",\n            \"type\": \"binary\",\n            \"options\": [\n                \"Yes\",\n                \"No\"\n            ],\n            \"publishDate\": \"2022-03-02T00:00:00.000Z\"\n        }\n    ],\n    \"answeredCount\": 0\n}"
+						}
+					]
+				},
+				{
+					"name": "Record user answer",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"answer\": \"Yes\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/now_then_question/62172ce81e1b3831e430f0a6/answer",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"now_then_question",
+								"62172ce81e1b3831e430f0a6",
+								"answer"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Create question - admin user",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category\": \"Pop Culture\",\n    \"title\": \"How many people will watch the first UEFA game via streaming?\",\n    \"type\": \"options\",\n    \"options\": [ \"<20M\", \"<50M\", \">60M\" ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/now_then_question",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"now_then_question"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update question - admin user",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category\": \"Football\",\n    \"title\": \"How many people will watch the first UEFA champion game via streaming?\",\n    \"type\": \"binary\",\n    \"options\": [ \"<20M\", \"<50M\", \">100M\"],\n    \"publishDate\": \"2022-03-21\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/now_then_question/623c16ba1424391e5ab70a5e",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"now_then_question",
+								"623c16ba1424391e5ab70a5e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete question - admin user",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category\": \"Football\",\n    \"title\": \"How many people will watch the first UEFA champion game via streaming?\",\n    \"type\": \"binary\",\n    \"options\": [ \"<20M\", \"<50M\", \">100M\"],\n    \"publishDate\": \"2020-08-23\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/now_then_question/5f27125ab90380a42e507cf2",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"now_then_question",
+								"5f27125ab90380a42e507cf2"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "List questions - admin user",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"url": {
+							"raw": "{{api-endpoint}}/admin/now_and_thens?page=3",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"admin",
+								"now_and_thens"
+							],
+							"query": [
+								{
+									"key": "page",
+									"value": "3"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Personality Quiz",
+			"item": [
+				{
+					"name": "List questions",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/personality_quiz",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personality_quiz"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List questions",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"type": "text",
+										"value": "{{auth-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/personality_quiz",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"personality_quiz"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "756"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2f4-sXDR/Ak62S7VGYVu+OOMpg81Di0\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:23:14 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"621eee3b861a2c681055c4f8\",\n        \"question\": \"Tends to be quiet?\",\n        \"options\": [\n            \"Not at all\",\n            \"Somewhat\",\n            \"Neutral\",\n            \"Agree\",\n            \"Definitely\"\n        ],\n        \"position\": 0\n    },\n    {\n        \"id\": \"621eee3b861a2c681055c4f9\",\n        \"question\": \"Is compassionate has a soft heart?\",\n        \"options\": [\n            \"Not at all\",\n            \"Somewhat\",\n            \"Neutral\",\n            \"Agree\",\n            \"Definitely\"\n        ],\n        \"position\": 1\n    },\n    {\n        \"id\": \"621eee3b861a2c681055c4fa\",\n        \"question\": \"Tends to be disorganized\",\n        \"options\": [\n            \"Not at all\",\n            \"Somewhat\",\n            \"Neutral\",\n            \"Agree\",\n            \"Definitely\"\n        ],\n        \"position\": 2\n    },\n    {\n        \"id\": \"621eee3b861a2c681055c4fb\",\n        \"question\": \"Worries a lot\",\n        \"options\": [\n            \"Not at all\",\n            \"Somewhat\",\n            \"Neutral\",\n            \"Agree\",\n            \"Definitely\"\n        ],\n        \"position\": 3\n    },\n    {\n        \"id\": \"621eee3b861a2c681055c4fc\",\n        \"question\": \"Tends to be rude to others\",\n        \"options\": [\n            \"Not at all\",\n            \"Somewhat\",\n            \"Neutral\",\n            \"Agree\",\n            \"Definitely\"\n        ],\n        \"position\": 4\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Questions Answers",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "[\n    {\n        \"questionId\": \"5f3edd427e03f8a509a4fd88\",\n        \"answer\": \"Somewhat\"\n    }, {\n        \"questionId\": \"5f3edd427e03f8a509a4fd89\",\n        \"answer\": \"Not at all\"\n    },\n    {\n        \"questionId\": \"5f3edd427e03f8a509a4fd8a\",\n        \"answer\": \"Somewhat\"\n    },\n    {\n        \"questionId\": \"5f3edd427e03f8a509a4fd8b\",\n        \"answer\": \"Neutral\"\n    },\n    {\n        \"questionId\": \"5f3edd427e03f8a509a4fd8c\",\n        \"answer\": \"Agree\"\n    }    \n]",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/personality_quiz/answers",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"personality_quiz",
+								"answers"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Gifts",
+			"item": [
+				{
+					"name": "List Available Gifts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/gifts",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"gifts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List Available Gifts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"type": "text",
+										"value": "{{auth-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/gifts",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"gifts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1135"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"46f-6yGAK+0aNN5uWqmIdyOdYf0NF18\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:23:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"avatars\": [\n        {\n            \"id\": \"621eee5c1a55a16869544787\",\n            \"name\": \"Avarat 1\",\n            \"image\": \"https://everywhen.blob.core.windows.net/avatars/default_1.png\",\n            \"type\": \"avatar\",\n            \"category\": \"\",\n            \"free\": true,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 0\n            },\n            \"purchased\": false\n        },\n        {\n            \"id\": \"621eee5c1a55a16869544788\",\n            \"name\": \"Avarat 2\",\n            \"image\": \"https://everywhen.blob.core.windows.net/avatars/default_2.png\",\n            \"type\": \"avatar\",\n            \"category\": \"\",\n            \"free\": true,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 0\n            },\n            \"purchased\": false\n        }\n    ],\n    \"flairs\": [\n        {\n            \"id\": \"621eee5c1a55a168695447a5\",\n            \"name\": \"Hat\",\n            \"image\": \"https://everywhen.blob.core.windows.net/flairs/hate.png\",\n            \"type\": \"flair\",\n            \"category\": \"hat\",\n            \"free\": false,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 5\n            },\n            \"purchased\": false\n        },\n        {\n            \"id\": \"621eee5c1a55a168695447a6\",\n            \"name\": \"Cap\",\n            \"image\": \"https://everywhen.blob.core.windows.net/flairs/XMLID_444_.png\",\n            \"type\": \"flair\",\n            \"category\": \"hat\",\n            \"free\": false,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 10\n            },\n            \"purchased\": false\n        },\n        {\n            \"id\": \"621eee5c1a55a168695447a7\",\n            \"name\": \"Goggle\",\n            \"image\": \"https://everywhen.blob.core.windows.net/flairs/XMLID_493_.png\",\n            \"type\": \"flair\",\n            \"category\": \"goggle\",\n            \"free\": false,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 20\n            },\n            \"purchased\": false\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "List  User Gifts",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/user_gifts",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"user_gifts"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "List  User Gifts",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"type": "text",
+										"value": "{{auth-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/user_gifts",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"user_gifts"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "26"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a-iSp0ncNSpFcyb5v997oMBhZyg1A\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:23:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"avatars\": [],\n    \"flairs\": []\n}"
+						}
+					]
+				},
+				{
+					"name": "Reedem Points for gift.",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/redeem_points/5f5b2fb545fcb53a6f79be5e",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"redeem_points",
+								"5f5b2fb545fcb53a6f79be5e"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Stats, Leagues, LeaderBoard",
+			"item": [
+				{
+					"name": "Leader Board",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/leaderboard",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"leaderboard"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Leader Board",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"type": "text",
+										"value": "{{auth-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/leaderboard",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"leaderboard"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "1220"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c4-53NuhPhh/4WUPAb58albnyYUgZs\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:23:53 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"all\": [\n        {\n            \"statsId\": \"621eef845f2bcb68f4810dc0\",\n            \"userId\": \"621eef665f2bcb68f4810db3\",\n            \"username\": \"jiren\",\n            \"points\": 0,\n            \"avatar\": \"\",\n            \"leagueId\": \"621eee3125753e878d061b17\"\n        }\n    ],\n    \"group\": [\n        {\n            \"statsId\": \"621eef845f2bcb68f4810dc0\",\n            \"userId\": \"621eef665f2bcb68f4810db3\",\n            \"username\": \"jiren\",\n            \"points\": 0,\n            \"avatar\": \"\",\n            \"leagueId\": \"621eee3125753e878d061b17\"\n        }\n    ],\n    \"leagues\": [\n        {\n            \"id\": \"621eee3125753e878d061b17\",\n            \"name\": \"Bronze\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/bronze.png\",\n            \"description\": \"Complete 20% + to unlock Bronze leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b18\",\n            \"name\": \"Gold\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/gold.png\",\n            \"description\": \"Complete 60% + to unlock Gold leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b19\",\n            \"name\": \"Silver\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/silver.png\",\n            \"description\": \"Complete 40% + to unlock silver leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b1a\",\n            \"name\": \"Platinum\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/platinum.png\",\n            \"description\": \"Complete 80% + to unlock Platinum leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b1b\",\n            \"name\": \"Diamond\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/diamond.png\",\n            \"description\": \"Complete 100% + to unlock Diamond leagues\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Hall Of Fame",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/halloffame",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"halloffame"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Hall Of Fame",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"type": "text",
+										"value": "{{auth-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/halloffame",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"halloffame"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "457"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c9-kwGUaJ+4Vb9/RIMfiqTAzAH3e2s\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:24:15 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"league\": {\n        \"id\": \"621eee3125753e878d061b17\",\n        \"name\": \"Bronze\",\n        \"image\": \"https://everywhen.blob.core.windows.net/leagues/bronze.png\",\n        \"description\": \"Complete 20% + to unlock Bronze leagues\"\n    },\n    \"todaysTrials\": 0,\n    \"totalPredictPictures\": 0,\n    \"correctPredictPictures\": 0,\n    \"totalStreaks\": 0,\n    \"streakProgress\": 0,\n    \"points\": 0,\n    \"currencies\": {\n        \"rubies\": 0,\n        \"emeralds\": 0\n    },\n    \"unlockNowAndThen\": false,\n    \"nowThen\": {\n        \"total\": 0,\n        \"correct\": 0,\n        \"incorrect\": 0\n    },\n    \"predictionPerformace\": {\n        \"all\": [],\n        \"user\": []\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Leagues",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/leagues",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"leagues"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Leagues",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"type": "text",
+										"value": "{{auth-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/leagues",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"leagues"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "974"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"3ce-KdMF36MFid7Lo7wAsDPqvSky57k\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:24:34 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": \"621eee3125753e878d061b17\",\n        \"name\": \"Bronze\",\n        \"image\": \"https://everywhen.blob.core.windows.net/leagues/bronze.png\",\n        \"description\": \"Complete 20% + to unlock Bronze leagues\",\n        \"userLeague\": true\n    },\n    {\n        \"id\": \"621eee3125753e878d061b18\",\n        \"name\": \"Gold\",\n        \"image\": \"https://everywhen.blob.core.windows.net/leagues/gold.png\",\n        \"description\": \"Complete 60% + to unlock Gold leagues\",\n        \"userLeague\": false\n    },\n    {\n        \"id\": \"621eee3125753e878d061b19\",\n        \"name\": \"Silver\",\n        \"image\": \"https://everywhen.blob.core.windows.net/leagues/silver.png\",\n        \"description\": \"Complete 40% + to unlock silver leagues\",\n        \"userLeague\": false\n    },\n    {\n        \"id\": \"621eee3125753e878d061b1a\",\n        \"name\": \"Platinum\",\n        \"image\": \"https://everywhen.blob.core.windows.net/leagues/platinum.png\",\n        \"description\": \"Complete 80% + to unlock Platinum leagues\",\n        \"userLeague\": false\n    },\n    {\n        \"id\": \"621eee3125753e878d061b1b\",\n        \"name\": \"Diamond\",\n        \"image\": \"https://everywhen.blob.core.windows.net/leagues/diamond.png\",\n        \"description\": \"Complete 100% + to unlock Diamond leagues\",\n        \"userLeague\": false\n    }\n]"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Contact Us",
+			"item": [
+				{
+					"name": "New form",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/contact_us",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contact_us"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "New form",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"type": "text",
+										"value": "{{auth-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/contact_us",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contact_us"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "535"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"217-g3gs2fQe+Q9mNWQZ4cjq8QAz2bE\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:24:46 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"categories\": [\n        \"Bug\",\n        \"Suggestion\",\n        \"General Feedback\"\n    ],\n    \"uploadUrls\": [\n        \"https://everywhen.blob.core.windows.net/contactus/621eef665f2bcb68f4810db3_1646195086843.png?sv=2020-10-02&st=2022-03-02T04%3A24%3A46Z&se=2022-03-02T04%3A26%3A16Z&sr=b&sp=cw&sig=mT8U3Rx6zxpv4iuELW85PcCJvIK7%2FCydUFHII%2FyBOAQ%3D\",\n        \"https://everywhen.blob.core.windows.net/contactus/621eef665f2bcb68f4810db3_1646195086844.png?sv=2020-10-02&st=2022-03-02T04%3A24%3A46Z&se=2022-03-02T04%3A26%3A16Z&sr=b&sp=cw&sig=Q%2BMuUDkU%2FmZ%2BZL6gesCxRC611%2FRao0jW1bSe8I7I1DM%3D\"\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Generate direct upload url.",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/contact_us/image_upload_url",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contact_us",
+								"image_upload_url"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Generate direct upload url.",
+							"originalRequest": {
+								"method": "GET",
+								"header": [
+									{
+										"key": "X-API-KEY",
+										"type": "text",
+										"value": "{{api-key}}"
+									},
+									{
+										"key": "X-AUTH-TOKEN",
+										"type": "text",
+										"value": "{{auth-token}}"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{api-endpoint}}/api/v1/contact_us/image_upload_url",
+									"host": [
+										"{{api-endpoint}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"contact_us",
+										"image_upload_url"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "234"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ea-8+AQGnZBm2GhedqmEXlMD5ir9fQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Wed, 02 Mar 2022 04:24:59 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"url\": \"https://everywhen.blob.core.windows.net/contactus/621eef665f2bcb68f4810db3_1646195099542.png?sv=2020-10-02&st=2022-03-02T04%3A24%3A59Z&se=2022-03-02T04%3A26%3A29Z&sr=b&sp=cw&sig=BTB5oB3p6EKJmOWFO97Laz9afY0AKqzsbMnlnY4mg44%3D\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"type": "text",
+								"value": "{{api-key}}"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"type": "text",
+								"value": "{{auth-token}}"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"category\": \"Bug\",\n    \"description\": \"test - 1\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/contact_us",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"contact_us"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PictureGroup",
+			"item": [
+				{
+					"name": "List of picture groups",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "{{api-key}}",
+								"type": "text"
+							},
+							{
+								"key": "X-AUTH-TOKEN",
+								"value": "{{auth-token}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api-endpoint}}/admin/picture_groups",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"admin",
+								"picture_groups"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Health",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{api-endpoint}}/api/health",
+					"host": [
+						"{{api-endpoint}}"
+					],
+					"path": [
+						"api",
+						"health"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Terms Of Use",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{api-key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api-endpoint}}/api/v1/static_content/terms_of_use",
+					"host": [
+						"{{api-endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"static_content",
+						"terms_of_use"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Terms Of Use",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{api-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/static_content/terms_of_use",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"static_content",
+								"terms_of_use"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "296"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"128-W/2JRE7sjmBy4HVtWoRXipVKBF4\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 02 Mar 2022 04:25:16 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"terms_of_use\",\n    \"content\": \"<html><head><meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\"></head><style> body { font-size: 120%; word-wrap: break-word; overflow-wrap: break-word; background-color: #FFFFFF;}</style><body></h4>Terms of Use Content</h4></body></html>\"\n}"
+				}
+			]
+		},
+		{
+			"name": "privacy policy",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{api-key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api-endpoint}}/api/v1/static_content/privacy_policy",
+					"host": [
+						"{{api-endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"static_content",
+						"privacy_policy"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "privacy policy",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{api-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/static_content/privacy_policy",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"static_content",
+								"privacy_policy"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "299"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"12b-Vl0ttAGKFkvwX7S3r3dZgJlzJeU\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 02 Mar 2022 04:25:34 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"name\": \"privacy_policy\",\n    \"content\": \"<html><head><meta name=\\\"viewport\\\" content=\\\"width=device-width, initial-scale=1.0\\\"></head><style> body { font-size: 120%; word-wrap: break-word; overflow-wrap: break-word; background-color: #FFFFFF;}</style><body><h4>Privacy Policy Content</h4></body></html>\"\n}"
+				}
+			]
+		},
+		{
+			"name": "Assets",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{api-key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api-endpoint}}/api/v1/assets",
+					"host": [
+						"{{api-endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"assets"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Assets",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{api-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/assets",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"assets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7183"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c0f-FMAyRW5NH6vBMQs3Me+cfTGcepE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 02 Mar 2022 04:25:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"avatars\": [\n        {\n            \"id\": \"621eee5c1a55a16869544787\",\n            \"name\": \"Avarat 1\",\n            \"image\": \"https://everywhen.blob.core.windows.net/avatars/default_1.png\",\n            \"type\": \"avatar\",\n            \"category\": \"\",\n            \"free\": true,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 0\n            }\n        },\n        {\n            \"id\": \"621eee5c1a55a16869544788\",\n            \"name\": \"Avarat 2\",\n            \"image\": \"https://everywhen.blob.core.windows.net/avatars/default_2.png\",\n            \"type\": \"avatar\",\n            \"category\": \"\",\n            \"free\": true,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 0\n            }\n        }\n    ],\n    \"flairs\": [\n        {\n            \"id\": \"621eee5c1a55a168695447a5\",\n            \"name\": \"Hat\",\n            \"image\": \"https://everywhen.blob.core.windows.net/flairs/hate.png\",\n            \"type\": \"flair\",\n            \"category\": \"hat\",\n            \"free\": false,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 5\n            }\n        },\n        {\n            \"id\": \"621eee5c1a55a168695447a6\",\n            \"name\": \"Cap\",\n            \"image\": \"https://everywhen.blob.core.windows.net/flairs/XMLID_444_.png\",\n            \"type\": \"flair\",\n            \"category\": \"hat\",\n            \"free\": false,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 10\n            }\n        },\n        {\n            \"id\": \"621eee5c1a55a168695447a7\",\n            \"name\": \"Goggle\",\n            \"image\": \"https://everywhen.blob.core.windows.net/flairs/XMLID_493_.png\",\n            \"type\": \"flair\",\n            \"category\": \"goggle\",\n            \"free\": false,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 20\n            }\n        }\n    ],\n    \"leagues\": [\n        {\n            \"id\": \"621eee3125753e878d061b17\",\n            \"name\": \"Bronze\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/bronze.png\",\n            \"description\": \"Complete 20% + to unlock Bronze leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b18\",\n            \"name\": \"Gold\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/gold.png\",\n            \"description\": \"Complete 60% + to unlock Gold leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b19\",\n            \"name\": \"Silver\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/silver.png\",\n            \"description\": \"Complete 40% + to unlock silver leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b1a\",\n            \"name\": \"Platinum\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/platinum.png\",\n            \"description\": \"Complete 80% + to unlock Platinum leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b1b\",\n            \"name\": \"Diamond\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/diamond.png\",\n            \"description\": \"Complete 100% + to unlock Diamond leagues\"\n        }\n    ],\n    \"pictures\": [\n        {\n            \"id\": \"621eee725454bb68a820abec\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/1.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abed\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/2.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abee\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/3.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abef\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/4.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf0\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/5.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf1\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/6.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf2\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/7.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf3\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/8.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf4\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/9.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf5\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/10.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf6\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/11.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf7\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/12.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf8\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/13.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf9\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/14.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abfa\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/15.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abfb\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/16.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abfc\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/17.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abfd\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abfe\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/19.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abff\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/20.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac00\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/21.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac01\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/22.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac02\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/23.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac03\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/24.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac04\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/25.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac05\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/26.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac06\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/27.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac07\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/28.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac08\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/29.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac09\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/30.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0a\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/31.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0b\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/32.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0c\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/33.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0d\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/34.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0e\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/35.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0f\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/36.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac10\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/37.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac11\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/38.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac12\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/39.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac13\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/40.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac14\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/41.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac15\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/42.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac16\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/43.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac17\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/44.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac18\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/45.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac19\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/46.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac1a\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/47.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac1b\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/48.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac1c\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/49.jpg\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "List Ancestral Heritage",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{api-key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api-endpoint}}/api/v1/ancestral_heritage",
+					"host": [
+						"{{api-endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ancestral_heritage"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Assets",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{api-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/assets",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"assets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7183"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c0f-FMAyRW5NH6vBMQs3Me+cfTGcepE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 02 Mar 2022 04:25:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"avatars\": [\n        {\n            \"id\": \"621eee5c1a55a16869544787\",\n            \"name\": \"Avarat 1\",\n            \"image\": \"https://everywhen.blob.core.windows.net/avatars/default_1.png\",\n            \"type\": \"avatar\",\n            \"category\": \"\",\n            \"free\": true,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 0\n            }\n        },\n        {\n            \"id\": \"621eee5c1a55a16869544788\",\n            \"name\": \"Avarat 2\",\n            \"image\": \"https://everywhen.blob.core.windows.net/avatars/default_2.png\",\n            \"type\": \"avatar\",\n            \"category\": \"\",\n            \"free\": true,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 0\n            }\n        }\n    ],\n    \"flairs\": [\n        {\n            \"id\": \"621eee5c1a55a168695447a5\",\n            \"name\": \"Hat\",\n            \"image\": \"https://everywhen.blob.core.windows.net/flairs/hate.png\",\n            \"type\": \"flair\",\n            \"category\": \"hat\",\n            \"free\": false,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 5\n            }\n        },\n        {\n            \"id\": \"621eee5c1a55a168695447a6\",\n            \"name\": \"Cap\",\n            \"image\": \"https://everywhen.blob.core.windows.net/flairs/XMLID_444_.png\",\n            \"type\": \"flair\",\n            \"category\": \"hat\",\n            \"free\": false,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 10\n            }\n        },\n        {\n            \"id\": \"621eee5c1a55a168695447a7\",\n            \"name\": \"Goggle\",\n            \"image\": \"https://everywhen.blob.core.windows.net/flairs/XMLID_493_.png\",\n            \"type\": \"flair\",\n            \"category\": \"goggle\",\n            \"free\": false,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 20\n            }\n        }\n    ],\n    \"leagues\": [\n        {\n            \"id\": \"621eee3125753e878d061b17\",\n            \"name\": \"Bronze\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/bronze.png\",\n            \"description\": \"Complete 20% + to unlock Bronze leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b18\",\n            \"name\": \"Gold\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/gold.png\",\n            \"description\": \"Complete 60% + to unlock Gold leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b19\",\n            \"name\": \"Silver\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/silver.png\",\n            \"description\": \"Complete 40% + to unlock silver leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b1a\",\n            \"name\": \"Platinum\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/platinum.png\",\n            \"description\": \"Complete 80% + to unlock Platinum leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b1b\",\n            \"name\": \"Diamond\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/diamond.png\",\n            \"description\": \"Complete 100% + to unlock Diamond leagues\"\n        }\n    ],\n    \"pictures\": [\n        {\n            \"id\": \"621eee725454bb68a820abec\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/1.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abed\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/2.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abee\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/3.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abef\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/4.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf0\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/5.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf1\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/6.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf2\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/7.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf3\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/8.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf4\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/9.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf5\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/10.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf6\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/11.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf7\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/12.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf8\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/13.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf9\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/14.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abfa\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/15.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abfb\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/16.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abfc\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/17.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abfd\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abfe\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/19.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abff\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/20.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac00\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/21.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac01\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/22.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac02\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/23.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac03\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/24.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac04\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/25.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac05\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/26.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac06\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/27.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac07\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/28.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac08\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/29.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac09\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/30.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0a\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/31.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0b\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/32.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0c\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/33.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0d\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/34.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0e\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/35.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0f\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/36.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac10\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/37.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac11\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/38.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac12\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/39.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac13\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/40.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac14\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/41.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac15\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/42.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac16\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/43.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac17\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/44.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac18\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/45.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac19\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/46.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac1a\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/47.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac1b\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/48.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac1c\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/49.jpg\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "List Ethnicity",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"value": "{{api-key}}",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{api-endpoint}}/api/v1/ethnicities",
+					"host": [
+						"{{api-endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"ethnicities"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Assets",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"value": "{{api-key}}",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/assets",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"assets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "7183"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"1c0f-FMAyRW5NH6vBMQs3Me+cfTGcepE\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 02 Mar 2022 04:25:38 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"avatars\": [\n        {\n            \"id\": \"621eee5c1a55a16869544787\",\n            \"name\": \"Avarat 1\",\n            \"image\": \"https://everywhen.blob.core.windows.net/avatars/default_1.png\",\n            \"type\": \"avatar\",\n            \"category\": \"\",\n            \"free\": true,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 0\n            }\n        },\n        {\n            \"id\": \"621eee5c1a55a16869544788\",\n            \"name\": \"Avarat 2\",\n            \"image\": \"https://everywhen.blob.core.windows.net/avatars/default_2.png\",\n            \"type\": \"avatar\",\n            \"category\": \"\",\n            \"free\": true,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 0\n            }\n        }\n    ],\n    \"flairs\": [\n        {\n            \"id\": \"621eee5c1a55a168695447a5\",\n            \"name\": \"Hat\",\n            \"image\": \"https://everywhen.blob.core.windows.net/flairs/hate.png\",\n            \"type\": \"flair\",\n            \"category\": \"hat\",\n            \"free\": false,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 5\n            }\n        },\n        {\n            \"id\": \"621eee5c1a55a168695447a6\",\n            \"name\": \"Cap\",\n            \"image\": \"https://everywhen.blob.core.windows.net/flairs/XMLID_444_.png\",\n            \"type\": \"flair\",\n            \"category\": \"hat\",\n            \"free\": false,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 10\n            }\n        },\n        {\n            \"id\": \"621eee5c1a55a168695447a7\",\n            \"name\": \"Goggle\",\n            \"image\": \"https://everywhen.blob.core.windows.net/flairs/XMLID_493_.png\",\n            \"type\": \"flair\",\n            \"category\": \"goggle\",\n            \"free\": false,\n            \"currencies\": {\n                \"rubies\": 0,\n                \"emeralds\": 20\n            }\n        }\n    ],\n    \"leagues\": [\n        {\n            \"id\": \"621eee3125753e878d061b17\",\n            \"name\": \"Bronze\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/bronze.png\",\n            \"description\": \"Complete 20% + to unlock Bronze leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b18\",\n            \"name\": \"Gold\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/gold.png\",\n            \"description\": \"Complete 60% + to unlock Gold leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b19\",\n            \"name\": \"Silver\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/silver.png\",\n            \"description\": \"Complete 40% + to unlock silver leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b1a\",\n            \"name\": \"Platinum\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/platinum.png\",\n            \"description\": \"Complete 80% + to unlock Platinum leagues\"\n        },\n        {\n            \"id\": \"621eee3125753e878d061b1b\",\n            \"name\": \"Diamond\",\n            \"image\": \"https://everywhen.blob.core.windows.net/leagues/diamond.png\",\n            \"description\": \"Complete 100% + to unlock Diamond leagues\"\n        }\n    ],\n    \"pictures\": [\n        {\n            \"id\": \"621eee725454bb68a820abec\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/1.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abed\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/2.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abee\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/3.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abef\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/4.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf0\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/5.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf1\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/6.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf2\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/7.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf3\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/8.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf4\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/9.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf5\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/10.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf6\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/11.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf7\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/12.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf8\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/13.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abf9\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/14.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abfa\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/15.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abfb\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/16.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abfc\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/17.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abfd\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/18.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abfe\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/19.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820abff\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/20.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac00\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/21.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac01\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/22.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac02\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/23.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac03\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/24.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac04\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/25.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac05\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/26.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac06\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/27.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac07\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/28.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac08\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/29.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac09\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/30.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0a\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/31.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0b\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/32.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0c\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/33.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0d\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/34.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0e\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/35.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac0f\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/36.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac10\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/37.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac11\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/38.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac12\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/39.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac13\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/40.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac14\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/41.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac15\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/42.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac16\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/43.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac17\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/44.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac18\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/45.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac19\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/46.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac1a\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/47.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac1b\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/48.jpg\"\n        },\n        {\n            \"id\": \"621eee725454bb68a820ac1c\",\n            \"image\": \"https://everywhen.blob.core.windows.net/predictpictures/49.jpg\"\n        }\n    ]\n}"
+				}
+			]
+		},
+		{
+			"name": "Assets free avatars",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{api-key}}"
+					}
+				],
+				"url": {
+					"raw": "{{api-endpoint}}/api/v1/assets/free_avatars",
+					"host": [
+						"{{api-endpoint}}"
+					],
+					"path": [
+						"api",
+						"v1",
+						"assets",
+						"free_avatars"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Assets free avatars",
+					"originalRequest": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "x-api-key",
+								"type": "text",
+								"value": "{{api-key}}"
+							}
+						],
+						"url": {
+							"raw": "{{api-endpoint}}/api/v1/assets/free_avatars",
+							"host": [
+								"{{api-endpoint}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"assets",
+								"free_avatars"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "X-Powered-By",
+							"value": "Express"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json; charset=utf-8"
+						},
+						{
+							"key": "Content-Length",
+							"value": "411"
+						},
+						{
+							"key": "ETag",
+							"value": "W/\"19b-XTAjDv73W7PAGK1zLU46RvK0wvs\""
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 02 Mar 2022 04:25:47 GMT"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Keep-Alive",
+							"value": "timeout=5"
+						}
+					],
+					"cookie": [],
+					"body": "[\n    {\n        \"id\": \"621eee5c1a55a16869544787\",\n        \"name\": \"Avarat 1\",\n        \"image\": \"https://everywhen.blob.core.windows.net/avatars/default_1.png\",\n        \"type\": \"avatar\",\n        \"category\": \"\",\n        \"free\": true,\n        \"currencies\": {\n            \"rubies\": 0,\n            \"emeralds\": 0\n        }\n    },\n    {\n        \"id\": \"621eee5c1a55a16869544788\",\n        \"name\": \"Avarat 2\",\n        \"image\": \"https://everywhen.blob.core.windows.net/avatars/default_2.png\",\n        \"type\": \"avatar\",\n        \"category\": \"\",\n        \"free\": true,\n        \"currencies\": {\n            \"rubies\": 0,\n            \"emeralds\": 0\n        }\n    }\n]"
+				}
+			]
+		},
+		{
+			"name": "Admin Login",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{api-key}}"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin@example.com\",\n    \"password\": \"password\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api-endpoint}}/admin/sign_in",
+					"host": [
+						"{{api-endpoint}}"
+					],
+					"path": [
+						"admin",
+						"sign_in"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Chang deployment branch - Production",
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "$api-everywhen-prod",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "joa7yMRuprBiyQR7D0C4QeRnHPH0lyTuQZJ01QAnQK5G8FDtDzS4Sbct8TwN",
+							"type": "string"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "x-api-key",
+						"type": "text",
+						"value": "{{api-key}}",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"deployment_branch\",\n    \"value\": \"production\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-everywhen-prod.scm.azurewebsites.net:443/settings",
+					"protocol": "https",
+					"host": [
+						"api-everywhen-prod",
+						"scm",
+						"azurewebsites",
+						"net"
+					],
+					"port": "443",
+					"path": [
+						"settings"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Contact Us List - Admin",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "$api-everywhen-prod",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "joa7yMRuprBiyQR7D0C4QeRnHPH0lyTuQZJ01QAnQK5G8FDtDzS4Sbct8TwN",
+							"type": "string"
+						},
+						{
+							"key": "showPassword",
+							"value": false,
+							"type": "boolean"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "x-auth-token",
+						"type": "text",
+						"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjVmNGU1NTcxZjRlODRiZDM1MDVlMTE4ZCIsImlhdCI6MTU5OTgzMDUwOH0.W4N-n8I7Brdbpteg71T1txuGvXqkXEXJFXeGoqx-zGk",
+						"disabled": true
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"key\": \"deployment_branch\",\n    \"value\": \"production\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://api-everywhen.azurewebsites.net/admin/contact_us/?ordering=id&page=1&page_size=10",
+					"protocol": "https",
+					"host": [
+						"api-everywhen",
+						"azurewebsites",
+						"net"
+					],
+					"path": [
+						"admin",
+						"contact_us",
+						""
+					],
+					"query": [
+						{
+							"key": "ordering",
+							"value": "id"
+						},
+						{
+							"key": "page",
+							"value": "1"
+						},
+						{
+							"key": "page_size",
+							"value": "10"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create Picture Group With Pictures And Date Time",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "{{api-key}}",
+						"type": "text"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "{{auth-token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"groupName\": \"Test\",\r\n    \"images\": [\r\n        \"https://everywhen.blob.core.windows.net/predictpictures/1.jpg\",\r\n        \"https://everywhen.blob.core.windows.net/predictpictures/1.jpg\"\r\n    ],\r\n    \"publishDate\": \"2022-03-24 16:00:00\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api-endpoint}}/admin/create-with-pictures-date-time",
+					"host": [
+						"{{api-endpoint}}"
+					],
+					"path": [
+						"admin",
+						"create-with-pictures-date-time"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Update Static content",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "{{api-key}}",
+						"type": "text"
+					},
+					{
+						"key": "X-AUTH-TOKEN",
+						"value": "{{auth-token}}",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"content\": \"Hellllo\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{api-endpoint}}/admin/static_contents/621dc698aa2430044bf56380",
+					"host": [
+						"{{api-endpoint}}"
+					],
+					"path": [
+						"admin",
+						"static_contents",
+						"621dc698aa2430044bf56380"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete Picture Group",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "{{api-endpoint}}/admin/picture_groups/623b134ed7346960fc4823c1",
+					"host": [
+						"{{api-endpoint}}"
+					],
+					"path": [
+						"admin",
+						"picture_groups",
+						"623b134ed7346960fc4823c1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "api-endpoint",
+			"value": "http://13.233.201.75:3000",
+			"type": "string"
+		},
+		{
+			"key": "api-key",
+			"value": "d760aeca6f2e36127b47db5e72d15a47",
+			"type": "string"
+		},
+		{
+			"key": "auth-token",
+			"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjYyMWVlZjY2NWYyYmNiNjhmNDgxMGRiMyIsImlhdCI6MTY0NjE5NDU2NH0.a_mVjQeVWi-DOz9WGqyoVPyWaz1NxTu2du7L0sjRZ44",
+			"type": "string"
+		},
+		{
+			"value": "",
+			"type": "string",
+			"disabled": true
+		}
+	]
+}

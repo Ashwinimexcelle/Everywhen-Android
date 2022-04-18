@@ -1,16 +1,17 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto">
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
 
 
     <data class="HomeFragmentBinding">
 
         <variable
             name="homeViewModel"
-            type="com.mexcelle.everywhendemo.ui.ui.home.HomeViewModel" />
+            type="com.mexcelle.thoughtifydemo.ui.ui.home.HomeViewModel" />
 
     </data>
 
-    <androidx.constraintlayout.widget.ConstraintLayout xmlns:tools="http://schemas.android.com/tools"
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         tools:context=".ui.ui.home.HomeFragment">
@@ -24,7 +25,19 @@
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:background="@drawable/bluebackground">
+            android:background="@drawable/bg12">
+
+
+            <ImageView
+                android:id="@+id/img3"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/_60sdp"
+                android:layout_marginStart="@dimen/_20sdp"
+                android:layout_marginTop="@dimen/_20sdp"
+                android:layout_marginEnd="@dimen/_20sdp"
+                android:layout_marginBottom="@dimen/_20sdp"
+                android:src="@drawable/bg11" />
+
 
             <RelativeLayout
                 android:id="@+id/rl1"
@@ -32,8 +45,7 @@
                 android:layout_height="@dimen/_60sdp"
                 android:layout_marginLeft="@dimen/_20sdp"
                 android:layout_marginTop="@dimen/_20sdp"
-                android:layout_marginRight="@dimen/_20sdp"
-                android:background="@drawable/rounded_corner_primary1">
+                android:layout_marginRight="@dimen/_20sdp">
 
 
                 <LinearLayout
@@ -70,14 +82,14 @@
 
 
                 <de.hdodenhof.circleimageview.CircleImageView
-                    android:id="@+id/img"
+                    android:id="@+id/profile_img"
                     android:layout_width="@dimen/_40sdp"
                     android:layout_height="@dimen/_40sdp"
                     android:layout_alignParentRight="true"
                     android:layout_centerVertical="true"
                     android:layout_marginRight="@dimen/_20sdp"
                     android:src="@mipmap/ic_launcher_round"
-                    app:civ_border_color="@color/white"
+                    app:civ_border_color="@color/g1"
                     app:civ_border_width="2sp" />
 
 
@@ -88,14 +100,12 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/rl1"
-                android:layout_marginTop="@dimen/_20sdp"
-                android:background="@drawable/rounded_corner_white_rl">
+                android:layout_marginTop="@dimen/_20sdp">
 
                 <RelativeLayout
                     android:id="@+id/rl2"
                     android:layout_width="match_parent"
-                    android:layout_height="@dimen/_130sdp"
-                    android:background="@color/grey11">
+                    android:layout_height="@dimen/_130sdp">
 
 
                     <com.airbnb.lottie.LottieAnimationView
@@ -110,88 +120,268 @@
 
                 </RelativeLayout>
 
-                <TextView
-                    android:id="@+id/pp_txt1"
+
+                <LinearLayout
+                    android:id="@+id/main11"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="@dimen/_370sdp"
                     android:layout_below="@+id/rl2"
-                    android:layout_marginLeft="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    android:layout_marginRight="@dimen/_20sdp"
-                    android:text="Predict the Picture"
-                    android:textColor="@color/primary1"
-                    android:textSize="@dimen/_18sdp" />
+                    android:visibility="visible"
+                    android:animateLayoutChanges="true"
+                    android:orientation="vertical">
+
+                    <RelativeLayout
+                        android:id="@+id/rl11"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_135sdp"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_20sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_5sdp"
+                        android:animateLayoutChanges="true"
+                        android:background="@android:color/transparent"
+                        android:paddingTop="@dimen/_10sdp"
+                        android:visibility="visible">
+
+                        <ImageView
+                            android:id="@+id/img1"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/gradiant_11" />
+
+                        <TextView
+                            android:id="@+id/pp_txt1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:text="Predict the Picture"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_16sdp" />
 
 
-                <TextView
-                    android:id="@+id/pp_txt2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/pp_txt1"
-                    android:layout_marginLeft="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginRight="@dimen/_20sdp"
-                    android:text="Identify the correct image from a random set of four"
-                    android:textColor="@color/primary1"
-                    android:textSize="@dimen/_10sdp" />
+                        <TextView
+                            android:id="@+id/pp_txt2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/pp_txt1"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:text="Identify the correct image from a random set of four"
+                            android:textColor="@color/txt"
+                            android:textSize="@dimen/_10sdp" />
 
 
-                <TextView
-                    android:id="@+id/pp_play_now"
-                    android:layout_width="@dimen/_100sdp"
-                    android:layout_height="@dimen/_35sdp"
-                    android:layout_below="@+id/pp_txt2"
-                    android:layout_marginLeft="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginRight="@dimen/_20sdp"
-                    android:background="@drawable/rounded_primary1"
-                    android:gravity="center"
-                    android:text="Play Now"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_10sdp" />
+                        <TextView
+                            android:id="@+id/pp_play_now"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_below="@+id/pp_txt2"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:background="@drawable/rounded_primary1"
+                            android:gravity="center"
+                            android:text="Play Now"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </RelativeLayout>
 
 
-                <TextView
-                    android:id="@+id/nowthen_txt1"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/pp_play_now"
-                    android:layout_marginLeft="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_20sdp"
-                    android:layout_marginRight="@dimen/_20sdp"
-                    android:text="Now and Then"
-                    android:textColor="@color/primary1"
-                    android:textSize="@dimen/_18sdp" />
+                    <RelativeLayout
+                        android:id="@+id/rl12"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/_135sdp"
+                        android:layout_below="@+id/rl11"
+                        android:layout_marginStart="@dimen/_20sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:layout_marginEnd="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:background="@android:color/transparent"
+                        android:paddingTop="@dimen/_10sdp">
+
+                        <ImageView
+                            android:id="@+id/img2"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/gradiant_11" />
 
 
-                <TextView
-                    android:id="@+id/nowthen_txt2"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@+id/nowthen_txt1"
-                    android:layout_marginLeft="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_5sdp"
-                    android:layout_marginRight="@dimen/_20sdp"
-                    android:text="Choose the picture you feel matches the question."
-                    android:textColor="@color/primary1"
-                    android:textSize="@dimen/_10sdp" />
+                        <!--
+                                            android:layout_below="@+id/rl11"
+                        -->
+                        <TextView
+                            android:id="@+id/nowthen_txt1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_10sdp"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:text="Now and Then"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_18sdp" />
 
 
-                <TextView
-                    android:id="@+id/nowthen_play_now"
-                    android:layout_width="@dimen/_100sdp"
-                    android:layout_height="@dimen/_35sdp"
-                    android:layout_below="@+id/nowthen_txt2"
-                    android:layout_marginLeft="@dimen/_20sdp"
-                    android:layout_marginTop="@dimen/_10sdp"
-                    android:layout_marginRight="@dimen/_20sdp"
-                    android:layout_marginBottom="@dimen/_30sdp"
-                    android:background="@drawable/rounded_primary"
-                    android:gravity="center"
-                    android:text="Play Now"
-                    android:textColor="@color/white"
-                    android:textSize="@dimen/_10sdp" />
+                        <TextView
+                            android:id="@+id/nowthen_txt2"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@+id/nowthen_txt1"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:text="Choose the picture you feel matches the question."
+                            android:textColor="@color/txt"
+                            android:textSize="@dimen/_10sdp" />
 
+
+                        <TextView
+                            android:id="@+id/nowthen_play_now"
+                            android:layout_width="@dimen/_100sdp"
+                            android:layout_height="@dimen/_35sdp"
+                            android:layout_below="@+id/nowthen_txt2"
+                            android:layout_marginLeft="@dimen/_20sdp"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:layout_marginRight="@dimen/_20sdp"
+                            android:background="@drawable/rounded_primary"
+                            android:gravity="center"
+                            android:text="Play Now"
+                            android:textColor="@color/white"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+
+
+                <!-- <RelativeLayout
+                     android:id="@+id/rl11"
+                     android:layout_width="match_parent"
+                     android:layout_height="@dimen/_130sdp"
+                     android:layout_marginStart="@dimen/_20sdp"
+                     android:animateLayoutChanges="true"
+                     android:layout_marginTop="@dimen/_20sdp"
+                     android:layout_marginEnd="@dimen/_20sdp"
+                     android:layout_marginBottom="@dimen/_20sdp"
+                     android:visibility="visible"
+                     android:background="@android:color/transparent"
+                     android:paddingTop="@dimen/_10sdp">
+
+                     <ImageView
+                         android:id="@+id/img1"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:src="@drawable/gradiant_11" />
+
+                     <TextView
+                         android:id="@+id/pp_txt1"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="@dimen/_20sdp"
+                         android:layout_marginTop="@dimen/_10sdp"
+                         android:layout_marginRight="@dimen/_20sdp"
+                         android:text="Predict the Picture"
+                         android:textColor="@color/white"
+                         android:textSize="@dimen/_16sdp" />
+
+
+                     <TextView
+                         android:id="@+id/pp_txt2"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/pp_txt1"
+                         android:layout_marginLeft="@dimen/_20sdp"
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginRight="@dimen/_20sdp"
+                         android:text="Identify the correct image from a random set of four"
+                         android:textColor="@color/txt"
+                         android:textSize="@dimen/_10sdp" />
+
+
+                     <TextView
+                         android:id="@+id/pp_play_now"
+                         android:layout_width="@dimen/_100sdp"
+                         android:layout_height="@dimen/_35sdp"
+                         android:layout_below="@+id/pp_txt2"
+                         android:layout_marginLeft="@dimen/_20sdp"
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginRight="@dimen/_20sdp"
+                         android:background="@drawable/rounded_primary1"
+                         android:gravity="center"
+                         android:text="Play Now"
+                         android:textColor="@color/white"
+                         android:textSize="@dimen/_10sdp" />
+
+                 </RelativeLayout>
+
+
+                 <RelativeLayout
+                     android:id="@+id/rl12"
+                     android:layout_width="match_parent"
+                     android:layout_height="@dimen/_130sdp"
+                     android:layout_below="@+id/rl11"
+                     android:layout_marginStart="@dimen/_20sdp"
+                     android:layout_marginTop="@dimen/_5sdp"
+                     android:layout_marginEnd="@dimen/_20sdp"
+                     android:layout_marginBottom="@dimen/_20sdp"
+                     android:background="@android:color/transparent"
+                     android:paddingTop="@dimen/_10sdp">
+
+                     <ImageView
+                         android:id="@+id/img2"
+                         android:layout_width="match_parent"
+                         android:layout_height="match_parent"
+                         android:src="@drawable/gradiant_11" />
+
+
+                     &lt;!&ndash;
+                                         android:layout_below="@+id/rl11"
+                     &ndash;&gt;
+                     <TextView
+                         android:id="@+id/nowthen_txt1"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_marginLeft="@dimen/_20sdp"
+                         android:layout_marginTop="@dimen/_10sdp"
+                         android:layout_marginRight="@dimen/_20sdp"
+                         android:text="Now and Then"
+                         android:textColor="@color/white"
+                         android:textSize="@dimen/_18sdp" />
+
+
+                     <TextView
+                         android:id="@+id/nowthen_txt2"
+                         android:layout_width="match_parent"
+                         android:layout_height="wrap_content"
+                         android:layout_below="@+id/nowthen_txt1"
+                         android:layout_marginLeft="@dimen/_20sdp"
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginRight="@dimen/_20sdp"
+                         android:text="Choose the picture you feel matches the question."
+                         android:textColor="@color/txt"
+                         android:textSize="@dimen/_10sdp" />
+
+
+                     <TextView
+                         android:id="@+id/nowthen_play_now"
+                         android:layout_width="@dimen/_100sdp"
+                         android:layout_height="@dimen/_35sdp"
+                         android:layout_below="@+id/nowthen_txt2"
+                         android:layout_marginLeft="@dimen/_20sdp"
+                         android:layout_marginTop="@dimen/_5sdp"
+                         android:layout_marginRight="@dimen/_20sdp"
+                         android:background="@drawable/rounded_primary"
+                         android:gravity="center"
+                         android:text="Play Now"
+                         android:textColor="@color/white"
+                         android:textSize="@dimen/_10sdp" />
+
+                 </RelativeLayout>
+ -->
             </RelativeLayout>
 
 

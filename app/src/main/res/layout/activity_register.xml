@@ -8,7 +8,7 @@
 
         <variable
             name="registerScreenViewModel"
-            type="com.mexcelle.everywhendemo.viewModel.RegisterScreenViewModel" />
+            type="com.mexcelle.thoughtifydemo.viewModel.RegisterScreenViewModel" />
 
     </data>
 
@@ -25,13 +25,15 @@
 
             <RelativeLayout
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="match_parent"
+                android:background="@drawable/register1">
 
                 <ImageView
                     android:id="@+id/register_image"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:scaleType="centerCrop"
+                    android:visibility="invisible"
                     android:src="@drawable/register" />
 
 
@@ -54,7 +56,8 @@
                     android:layout_below="@+id/register_txt1"
                     android:layout_marginLeft="@dimen/_20sdp"
                     android:layout_marginRight="@dimen/_20sdp"
-                    android:text="@string/login_txt2"
+                    android:textAllCaps="true"
+                    android:text="@string/app_name"
                     android:textColor="@color/white"
                     android:textSize="@dimen/_24sdp" />
 
@@ -112,6 +115,7 @@
                         android:background="@android:color/transparent"
                         android:hint="@string/username_hint_txt"
                         android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
                         android:textColor="@color/txt_color"
                         android:textColorHint="@color/hint_color"
                         android:textSize="@dimen/_10sdp" />
@@ -163,6 +167,7 @@
                         android:hint="@string/email_hint_txt"
                         android:background="@android:color/transparent"
                         android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
                         android:textColor="@color/txt_color"
                         android:textColorHint="@color/hint_color"
                         android:textSize="@dimen/_10sdp" />
@@ -213,7 +218,10 @@
                         android:hint="@string/password_hint_txt"
                         android:text="@={registerScreenViewModel.password}"
                         android:paddingLeft="@dimen/_10sdp"
+                        android:paddingRight="@dimen/_10sdp"
+
                         android:background="@android:color/transparent"
+                        android:inputType="textPassword"
                         android:textColor="@color/txt_color"
                         android:textColorHint="@color/hint_color"
                         android:textSize="@dimen/_10sdp" />

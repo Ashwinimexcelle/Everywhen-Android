@@ -6,7 +6,7 @@
 
         <variable
             name="settingsViewModel"
-            type="com.mexcelle.everywhendemo.viewModel.SettingsViewModel" />
+            type="com.mexcelle.thoughtifydemo.viewModel.SettingsViewModel" />
 
     </data>
 

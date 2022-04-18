@@ -1,10 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.mexcelle.everywhendemo">
+    package="com.mexcelle.thoughtifydemo">
 
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_SMS" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+
+
     <uses-feature
         android:name="android.hardware.sensor.proximity"
         android:required="true" />
@@ -12,34 +18,47 @@
         android:name="android.hardware.sensor.gyroscope"
         android:required="true" />
     <application
-        android:name=".util.AppController"
+        android:name="com.mexcelle.thoughtifydemo.util.AppController"
         android:allowBackup="true"
         android:exported="false"
-        android:icon="@mipmap/ic_launcher"
+        android:icon="@drawable/logo1"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
+        android:roundIcon="@drawable/logo1"
+        android:hardwareAccelerated="true"
         android:supportsRtl="true"
         android:usesCleartextTraffic="true"
         android:theme="@style/SplashTheme">
         <activity
-            android:name=".ui.HomeScreenActivity"
+            android:name="com.mexcelle.thoughtifydemo.ui.HomeScreenActivity"
             android:label="@string/title_activity_home_screen"
-            android:theme="@style/SplashTheme.NoActionBar" />
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme" />
 
         <activity
-            android:name=".ui.MainActivity"
+            android:name="com.mexcelle.thoughtifydemo.ui.MainActivity"
             android:exported="true"
             android:theme="@style/SplashTheme"></activity>
 
         <activity
-            android:name=".ui.PreludeActivity"
+            android:name="com.mexcelle.thoughtifydemo.ui.PreludeActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme"></activity>
 
 
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="${applicationId}.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"></meta-data>
+        </provider>
+
+
         <activity
-            android:name=".ui.SplashActivity"
+            android:name="com.mexcelle.thoughtifydemo.ui.SplashActivity"
             android:exported="true"
             android:screenOrientation="portrait"
             android:theme="@style/SplashTheme">
@@ -51,73 +70,91 @@
         </activity>
 
         <activity
-            android:name=".ui.IntoductionActivity"
+            android:name="com.mexcelle.thoughtifydemo.ui.IntoductionActivity"
             android:exported="true"
             android:theme="@style/SplashTheme"></activity>
 
         <activity
-            android:name=".ui.HowToUseActivity"
+            android:name="com.mexcelle.thoughtifydemo.ui.HowToUseActivity"
             android:exported="true"
             android:theme="@style/SplashTheme"></activity>
 
         <activity
-            android:name=".ui.ui.IntuitionTestActivity"
+            android:name="com.mexcelle.thoughtifydemo.ui.ui.IntuitionTestActivity"
             android:exported="true"
             android:theme="@style/SplashTheme"></activity>
 
 
 
         <activity
-            android:name=".ui.OnBoardingActivity"
+            android:name="com.mexcelle.thoughtifydemo.ui.OnBoardingActivity"
             android:exported="true"
             android:theme="@style/SplashTheme"></activity>
 
         <activity
-            android:name=".ui.LoginActivity"
+            android:name="com.mexcelle.thoughtifydemo.ui.LoginActivity"
             android:exported="true"
             android:theme="@style/SplashTheme"></activity>
 
         <activity
-            android:name=".ui.RegisterActivity"
-            android:exported="true"
-            android:theme="@style/SplashTheme"></activity>
-
-
-        <activity
-            android:name=".ui.OTPActivity"
+            android:name="com.mexcelle.thoughtifydemo.ui.RegisterActivity"
             android:exported="true"
             android:theme="@style/SplashTheme"></activity>
 
 
         <activity
-            android:name=".ui.TermsAndConditionsActivity"
-            android:exported="true"
-            android:theme="@style/SplashTheme"></activity>
-
-        <activity
-            android:name=".ui.PrivacyPolicyActivity"
+            android:name="com.mexcelle.thoughtifydemo.ui.OTPActivity"
             android:exported="true"
             android:theme="@style/SplashTheme"></activity>
 
 
         <activity
-            android:name=".ui.ForgotPasswordActivity"
+            android:name="com.mexcelle.thoughtifydemo.ui.TermsAndConditionsActivity"
             android:exported="true"
             android:theme="@style/SplashTheme"></activity>
 
         <activity
-            android:name=".ui.PersonalQuestionsActivity"
+            android:name="com.mexcelle.thoughtifydemo.ui.PrivacyPolicyActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme"></activity>
+
+
+        <activity
+            android:name="com.mexcelle.thoughtifydemo.ui.ForgotPasswordActivity"
             android:exported="true"
             android:theme="@style/SplashTheme"></activity>
 
         <activity
-            android:name=".ui.MapActivity"
+            android:name="com.mexcelle.thoughtifydemo.ui.PersonalQuestionsActivity"
             android:exported="true"
             android:theme="@style/SplashTheme"></activity>
+
+        <activity
+            android:name="com.mexcelle.thoughtifydemo.ui.MapActivity"
+            android:exported="true"
+            android:theme="@style/SplashTheme"></activity>
+
+
 
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="${MAPS_API_KEY}" />
+            android:value="@string/api_key" />
+
+
+        <service
+            android:name=".firebase.MyFirebaseMessagingService"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="com.google.firebase.MESSAGING_EVENT" />
+            </intent-filter>
+        </service>
+
+        <meta-data
+            android:name="firebase_messaging_auto_init_enabled"
+            android:value="false" />
+        <meta-data
+            android:name="firebase_analytics_collection_enabled"
+            android:value="false" />
 
     </application>
 
