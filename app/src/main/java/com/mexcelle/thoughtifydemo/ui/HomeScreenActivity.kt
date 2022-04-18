@@ -222,9 +222,6 @@ class HomeScreenActivity : AppCompatActivity(), NavigationView.OnNavigationItemS
                                 )
                             )
                         }
-
-
-
                     } else {
 
                         Utility.hideProgressDialog(this@HomeScreenActivity)
